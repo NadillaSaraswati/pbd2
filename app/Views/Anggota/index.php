@@ -4,8 +4,10 @@
                    <!-- Page Heading -->
                    <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
 
-                  
                    <div class="card">
+                    
+ 
+                    </div>
                        <div class="card-body">
                            <table class="table table-striped">
                                <thread>
@@ -43,3 +45,5 @@
 
                </div>
                <!-- End of Main Content -->
+
+

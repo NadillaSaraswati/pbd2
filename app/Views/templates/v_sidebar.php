@@ -29,10 +29,10 @@
         <a class="nav-link" href="<?= base_url('Buku'); ?>">
             <i class="fas fa-fw fa-book"></i>
             <span>Buku</span></a>
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url('Transaksi'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Transaksi</span></a>
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url('Laporan'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Laporan</span></a>
     </li>
