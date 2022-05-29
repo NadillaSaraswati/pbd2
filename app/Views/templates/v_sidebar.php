@@ -24,16 +24,16 @@
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
         <a class="nav-link" href="<?= base_url('Anggota'); ?>">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-list"></i>
             <span>Anggota</span></a>
         <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-book"></i>
             <span>Buku</span></a>
         <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-table"></i>
             <span>Transaksi</span></a>
         <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-table"></i>
             <span>Laporan</span></a>
     </li>
 
