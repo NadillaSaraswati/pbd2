@@ -44,6 +44,7 @@ class Anggota extends Controller
         //insert data
         $success = $this->model->tambah($data);
         if ($success){
+            session()->setFlashdata('message', ' ditambahkan');
             return redirect()->to(base_url('anggota'));
         }
 

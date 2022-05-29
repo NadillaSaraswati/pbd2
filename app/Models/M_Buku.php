@@ -15,4 +15,9 @@ class M_Buku extends Model{
         return $this->db->table('smk2padang.tabel_buku')->get()->getResultArray();
     }
 
+    public function tambah($data)
+    {
+        return $this->db->table('smk2padang.tabel_buku')->insert($data);
+    }
+
 }
