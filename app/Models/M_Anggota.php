@@ -15,4 +15,9 @@ class M_Anggota extends Model{
         return $this->db->table('smk2padang.tabel_anggota')->get()->getResultArray();
     }
 
+    public function tambah($data)
+    {
+        return $this->db->table('smk2padang.tabel_anggota')->insert($data);
+    }
+
 }
