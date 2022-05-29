@@ -26,7 +26,7 @@
         <a class="nav-link" href="<?= base_url('Anggota'); ?>">
             <i class="fas fa-fw fa-list"></i>
             <span>Anggota</span></a>
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="<?= base_url('Buku'); ?>">
             <i class="fas fa-fw fa-book"></i>
             <span>Buku</span></a>
         <a class="nav-link" href="index.html">
