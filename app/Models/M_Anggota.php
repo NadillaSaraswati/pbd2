@@ -4,7 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_Anggota extends Model{
+class M_Anggota extends Model
+{
     public function __construct()
     {
         $this->db = db_connect();
@@ -12,12 +13,11 @@ class M_Anggota extends Model{
 
     public function getAllData()
     {
-        return $this->db->table('smk2padang.tabel_anggota')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_anggota')->get()->getResultArray();
     }
 
     public function tambah($data)
     {
-        return $this->db->table('smk2padang.tabel_anggota')->insert($data);
+        return $this->db->table('perpussmkn2.tabel_anggota')->insert($data);
     }
-
 }

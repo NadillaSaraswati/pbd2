@@ -4,7 +4,8 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class M_Laporan extends Model{
+class M_Laporan extends Model
+{
     public function __construct()
     {
         $this->db = db_connect();
@@ -12,7 +13,6 @@ class M_Laporan extends Model{
 
     public function getAllData()
     {
-        return $this->db->table('smk2padang.tabel_peminjaman')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_peminjaman')->get()->getResultArray();
     }
-
 }
