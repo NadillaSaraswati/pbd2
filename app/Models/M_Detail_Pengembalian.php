@@ -13,6 +13,6 @@ class M_Detail_Pengembalian extends Model
 
     public function getAllData()
     {
-        return $this->db->table('perpussmkn2.tabel_peminjaman')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_detail_pengembalian')->get()->getResultArray();
     }
 }

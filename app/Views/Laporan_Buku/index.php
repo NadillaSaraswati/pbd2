@@ -4,5 +4,5 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
 
-    <h5>Laporan Buku</h5>
+    <h5>Ini adalah halaman Laporan Buku</h5>
                  
