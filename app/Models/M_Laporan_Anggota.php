@@ -13,6 +13,6 @@ class M_Laporan_Anggota extends Model
 
     public function getAllData()
     {
-        return $this->db->table('perpussmkn2.tabel_peminjaman')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_anggota')->get()->getResultArray();
     }
 }
