@@ -13,6 +13,6 @@ class M_Laporan_Buku extends Model
 
     public function getAllData()
     {
-        return $this->db->table('perpussmkn2.tabel_peminjaman')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_buku')->get()->getResultArray();
     }
 }
