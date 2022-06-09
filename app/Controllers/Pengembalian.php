@@ -31,13 +31,19 @@ class Pengembalian extends Controller
     public function tambah()
     {
         $data = [
-            'id_peminjaman' => $this->request->getPost('id_peminjaman'),
-            'id_anggota' => $this->request->getPost('id_anggota'),
-            'id_user' => $this->request->getPost('id_anggota'),
-            'id_keterangan' => $this->request->getPost('id_keterangan'),
-            'tanggal_pinjam' => $this->request->getPost('tanggal_pinjam'),
-            'tanggal_pengembalian' => $this->request->getPost('tanggal_peminjaman'),
+            'id_pengembalian' => $this->request->getPost('id_pengembalian'),
+            'id_user' => $this->request->getPost('id_user'),
+            'id_peminjaman' => $this->request->getPost('id_peminjaman')
+           
         ];
+
+     //insert data
+     $success = $this->model->tambah($data);
+     if ($success){
+         session()->setFlashdata('message', ' ditambahkan');
+         return redirect()->to(base_url('pengembalian'));
+     }
+          
            
 
     }
