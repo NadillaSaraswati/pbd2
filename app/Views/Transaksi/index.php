@@ -6,9 +6,7 @@
 
             
         <a class="nav-link" href="<?= base_url('Peminjaman'); ?>">
-            <i class="fas fa-fw fa-book"></i>
-            <span>Peminjaman</span></a>
+            <h5>Peminjaman</h5></a>
         <a class="nav-link" href="<?= base_url('Pengembalian'); ?>">
-            <i class="fas fa-fw fa-book"></i>
-            <span>Pengembalian</span></a>
+            <h5>Pengembalian</h5></a>
        
