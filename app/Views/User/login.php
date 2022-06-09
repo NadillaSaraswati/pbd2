@@ -20,31 +20,53 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form>
-
-                  <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fa fa-book fa-2x me-3" style="color: #ff6219;"></i>
-                    <span class="h1 fw-bold mb-0">SIPUS</span>
+                <?php
+                //pesan validasi eror
+                $errors = session()->getFlashdata('errors');
+                if (!empty($errors)) { ?>
+                  <div class="alert alert-danger" role="alert">
+                    <ul>
+                      <?php foreach ($errors as $error) : ?>
+                        <li><?= esc($error) ?></li>
+                      <?php endforeach ?>
+                    </ul>
                   </div>
+                <?php } ?>
+                <?php
+                if (session()->getFlashdata('pesan')) {
+                  echo '<div class = "alert alert-success" role="alert">';
+                  echo session()-> getFlashdata('pesan');
+                  echo'</div>'; 
+                }
+                ?>
 
-                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Selamat Datang pada Sistem Informasi SIPUS</h5>
+                <?php
+                echo form_open('auth/cek_login');
+                ?>
 
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example17">Username</label>
-                  </div>
+                <div class="d-flex align-items-center mb-3 pb-1">
+                  <i class="fa fa-book fa-2x me-3" style="color: #ff6219;"></i>
+                  <span class="h1 fw-bold mb-0">SIPUS</span>
+                </div>
 
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example27">Password</label>
-                  </div>
+                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Selamat Datang pada Sistem Informasi SIPUS</h5>
 
-                  <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
-                  </div>
+                <div class="form-outline mb-4">
+                  <input name="nama_user" id="form2Example17" class="form-control form-control-lg" />
+                  <label class="form-label" for="form2Example17">Username</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="password" name="pass_user" id="form2Example27" class="form-control form-control-lg" />
+                  <label class="form-label" for="form2Example27">Password</label>
+                </div>
+
+                <div class="pt-1 mb-4">
+                  <button class="btn btn-dark btn-lg btn-block" type="submit">Login</button>
+                </div>
 
 
-                </form>
+                <?php echo form_close(); ?>
 
               </div>
             </div>
@@ -53,4 +75,11 @@
       </div>
     </div>
   </div>
+  <script>
+    window.setTimeout(function() {
+      $(".alert").fadeTo(500, 0).slideUp(500, function() {
+        $(this).remove();
+      });
+    }, 3000)
+  </script>
 </section>
