@@ -35,6 +35,7 @@ class Buku extends Controller
             'id_perolehan' => $this->request->getPost('id_perolehan'),
             'id_status' => $this->request->getPost('id_status'),
             'id_penerbit' => $this->request->getPost('id_penerbit'),
+            'id_subyek' => $this->request->getPost('id_subyek'),
             'id_jenis' => $this->request->getPost('id_jenis'),
             'judul_buku' => $this->request->getPost('judul_buku')
         ];
