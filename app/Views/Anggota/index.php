@@ -40,6 +40,7 @@
                                        <th>Id Jurusan</th>
                                        <th>Nama</th>
                                        <th>No Induk</th>
+                                       <th>Opsi</th>
                                    </tr>
                                </thread>
                                <tbody>
@@ -52,6 +53,9 @@
                                        <td><?= $row['id_jurusan']; ?></td>
                                        <td><?= $row['nama_anggota']; ?></td>
                                        <td><?= $row['no_induk']; ?></td>
+                                       <td>
+                                        <button> type="button" data-toggle="modal" data-target="#modalHapus" class"btn btn-sm btn-danger" > <i class="fa fa-trash-alt"></i> </button>
+                                       </td>
                                    </tr>
                                    <?php $i++; ?>
                                    <?php  endforeach;?>
@@ -114,3 +118,17 @@
                </div>
 
 
+<!-- Modal Hapus Data Siswa-->
+<div class="modal fade" id="modalHapus">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Apakah Anda Yakin Ingin Menghapus Data Ini?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/anggota/hapus/<?= $row['Id']; ?>" class="btn btn-primary">YA</a>
+      </div>
+    </div>
+  </div>
+</div>

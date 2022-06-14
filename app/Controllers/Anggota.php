@@ -50,4 +50,14 @@ class Anggota extends Controller
 
 
     }
+
+    public function hapus($id)
+    {
+        $success = $this->model->hapus($id);
+        if ($success){
+            session()->setFlashdata('message', ' dihapus');
+            return redirect()->to(base_url('anggota'));
+        }
+    }
+
 }
