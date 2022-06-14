@@ -83,6 +83,7 @@
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                        <span aria-hidden="true">&times;</span>
                                    </button>
+                                   <a href="/anggota/tambah/<?= $row['data']; ?>" class="btn btn-primary">YA</a>
                            </div>
                            <div class="modal-body">
                                <form action="<?= base_url('anggota/tambah'); ?>" method="post"> 
