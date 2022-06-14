@@ -54,7 +54,7 @@
                                        <td><?= $row['nama_anggota']; ?></td>
                                        <td><?= $row['no_induk']; ?></td>
                                        <td>
-                                        <button> type="button" data-toggle="modal" data-target="#modalHapus" class"btn btn-sm btn-danger" > <i class="fa fa-trash-alt"></i> </button>
+                                        <button type="button" data-toggle="modal" data-target="#modalHapus" class"btn btn-sm btn-danger" > <i class="fa fa-trash-alt"></i> </button>
                                        </td>
                                    </tr>
                                    <?php $i++; ?>
