@@ -33,6 +33,7 @@ class Peminjaman extends Controller
         $data = [
             'id_peminjaman' => $this->request->getPost('id_peminjaman'),
             'id_anggota' => $this->request->getPost('id_anggota'),
+            'id_buku' => $this->request->getPost('id_buku'),
             'id_user' => $this->request->getPost('id_user')
         ];
 

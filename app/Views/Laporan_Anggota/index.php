@@ -5,21 +5,7 @@
 
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
-
-    <?php if(session()->get('message')) :?>
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-        </button>
-        Data Anggota berhasil<strong><?=session()->getFlashdata('message');?></strong> 
-    </div>
     
-    <script>
-        $(".alert").alert();
-    </script>
-    <?php endif; ?>
-    
-
     <div class="card">
         <div class="class-header">
             <!-- Button trigger modal -->
@@ -43,15 +29,15 @@
                 <tbody>
                     <?php $i=1; ?>
                     <?php  foreach($laporan_anggota as $row) :?>
-                    <tr>
-                        <td scope="row"><?= $i; ?></td>
-                        <td><?= $row['id_anggota']; ?></td>
-                        <td><?= $row['no_registrasi']; ?></td>
-                        <td><?= $row['id_jurusan']; ?></td>
-                        <td><?= $row['nama_anggota']; ?></td>
-                        <td><?= $row['no_induk']; ?></td>
-                    </tr>
-                    <?php $i++; ?>
+                        <tr>
+                            <td scope="row"><?= $i; ?></td>
+                            <td><?= $row['id_anggota']; ?></td>
+                            <td><?= $row['no_registrasi']; ?></td>
+                            <td><?= $row['id_jurusan']; ?></td>
+                            <td><?= $row['nama_anggota']; ?></td>
+                            <td><?= $row['no_induk']; ?></td>
+                        </tr>
+                        <?php $i++; ?>
                     <?php  endforeach;?>
                 </tbody>
             </table>

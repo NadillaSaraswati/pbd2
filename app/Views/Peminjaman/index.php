@@ -35,6 +35,7 @@
                                        <th>No</th>
                                        <th>Id Peminjaman</th>
                                        <th>Id Anggota</th>
+                                       <th>Id Buku</th>
                                        <th>Id User</th>
                                    </tr>
                                </thread>
@@ -45,6 +46,7 @@
                                        <td scope="row"><?= $i; ?></td>
                                        <td><?= $row['id_peminjaman']; ?></td>
                                        <td><?= $row['id_anggota']; ?></td>
+                                       <td><?= $row['id_buku']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
                                    </tr>
                                    <?php $i++; ?>
@@ -82,6 +84,10 @@
                                <div class="form-group ab-0">
                                  <label for="id_anggota"></label>
                                  <input type="text" name="id_anggota" id="id_anggota" class="form-control" placeholder="Masukkan Id Anggota" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_buku"></label>
+                                 <input type="text" name="id_buku" id="id_buku" class="form-control" placeholder="Masukkan Id Buku" >
                                </div>
                                <div class="form-group ab-0">
                                  <label for="id_user"></label>

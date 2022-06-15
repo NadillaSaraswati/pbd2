@@ -5,21 +5,7 @@
 
   <!-- Page Heading -->
   <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
-
-  <?php if(session()->get('message')) :?>
-  <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-    </button>
-    Data Detail Peminjaman berhasil<strong><?=session()->getFlashdata('message');?></strong> 
-  </div>
   
-  <script>
-    $(".alert").alert();
-  </script>
-  <?php endif; ?>
-  
-
   <div class="card">
     <div class="class-header">
       <!-- Button trigger modal -->
@@ -43,14 +29,14 @@
         <tbody>
           <?php $i=1; ?>
           <?php  foreach($detail_peminjaman as $row) :?>
-          <tr>
-            <td scope="row"><?= $i; ?></td>
-            <td><?= $row['id_peminjaman']; ?></td>
-            <td><?= $row['id_buku']; ?></td>
-            <td><?= $row['tanggal_pinjam']; ?></td>
-            <td><?= $row['tanggal_pengembalian']; ?></td>
-          </tr>
-          <?php $i++; ?>
+            <tr>
+              <td scope="row"><?= $i; ?></td>
+              <td><?= $row['id_peminjaman']; ?></td>
+              <td><?= $row['id_buku']; ?></td>
+              <td><?= $row['tanggal_pinjam']; ?></td>
+              <td><?= $row['tanggal_pengembalian']; ?></td>
+            </tr>
+            <?php $i++; ?>
           <?php  endforeach;?>
         </tbody>
       </table>

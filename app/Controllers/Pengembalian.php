@@ -32,6 +32,7 @@ class Pengembalian extends Controller
     {
         $data = [
             'id_pengembalian' => $this->request->getPost('id_pengembalian'),
+            'id_anggota' => $this->request->getPost('id_anggota'),
             'id_user' => $this->request->getPost('id_user'),
             'id_peminjaman' => $this->request->getPost('id_peminjaman')
            

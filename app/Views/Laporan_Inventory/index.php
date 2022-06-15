@@ -13,25 +13,33 @@
                 <i class="fa fa-print"> Cetak</i>
             </button>
         </div>
-    
+
         <div class="card-body">
             <table class="table table-striped">
                 <thread>
                     <tr>
                         <th>No</th>
-                        <th>Id Pengembalian</th>
-                        <th>Id Keterangan</th>
-                        <th>Tanggal Dikembalikan</th>
+                        <th>Id Buku</th>
+                        <th>Id Perolehan</th>
+                        <th>Id Status</th>
+                        <th>Id Penerbit</th>
+                        <th>Id Subyek</th>
+                        <th>Id Jenis</th>
+                        <th>Judul Buku</th>
                     </tr>
                 </thread>
                 <tbody>
                     <?php $i=1; ?>
-                    <?php  foreach($detail_pengembalian as $row) :?>
+                    <?php  foreach($laporan_inventory as $row) :?>
                         <tr>
                             <td scope="row"><?= $i; ?></td>
-                            <td><?= $row['id_pengembalian']; ?></td>
-                            <td><?= $row['id_keterangan']; ?></td>
-                            <td><?= $row['tanggal_dikembalikan']; ?></td>
+                            <td><?= $row['id_buku']; ?></td>
+                            <td><?= $row['id_perolehan']; ?></td>
+                            <td><?= $row['id_status']; ?></td>
+                            <td><?= $row['id_penerbit']; ?></td>
+                            <td><?= $row['id_subyek']; ?></td>
+                            <td><?= $row['id_jenis']; ?></td>
+                            <td><?= $row['judul_buku']; ?></td>
                         </tr>
                         <?php $i++; ?>
                     <?php  endforeach;?>

@@ -20,6 +20,15 @@
     <!-- Custom styles for this template-->
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet">
 
+    <style>
+        @media print {
+            .navbar-nav, 
+            .btn,
+            footer {
+                display: none;
+            }
+        }
+    </style> 
 </head>
 
 <body id="page-top">

@@ -184,7 +184,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/anggota/hapus/<?= $row['Id']; ?>" class="btn btn-primary">YA</a>
+        <a href="/anggota/hapus/<?= $row['id_anggota']; ?>" class="btn btn-primary">YA</a>
       </div>
     </div>
   </div>
