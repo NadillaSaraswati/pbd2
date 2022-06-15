@@ -51,6 +51,29 @@ class Anggota extends Controller
 
     }
 
+    public function ubah()
+    {
+        $data = [
+            'id_anggota' => $this->request->getPost('id_anggota'),
+            'no_registrasi' => $this->request->getPost('no_registrasi'),
+            'id_jurusan' => $this->request->getPost('id_jurusan'),
+            'nama_anggota' => $this->request->getPost('nama_anggota'),
+            'no_induk' => $this->request->getPost('no_induk')
+        ];
+           
+
+        
+
+        //update  data
+        $success = $this->model->ubah($data, $id_anggota);
+        if ($success){
+            session()->setFlashdata('message', ' diubah');
+            return redirect()->to(base_url('anggota'));
+        }
+
+
+    }
+
     public function hapus($id)
     {
         $success = $this->model->hapus($id);
