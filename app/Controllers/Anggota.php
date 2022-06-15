@@ -76,6 +76,15 @@ class Anggota extends Controller
 
     public function hapus($id)
     {
+        $data = [
+            'id_anggota' => $this->request->getPost('id_anggota'),
+            'no_registrasi' => $this->request->getPost('no_registrasi'),
+            'id_jurusan' => $this->request->getPost('id_jurusan'),
+            'nama_anggota' => $this->request->getPost('nama_anggota'),
+            'no_induk' => $this->request->getPost('no_induk')
+        ];
+
+
         $success = $this->model->hapus($id);
         if ($success){
             session()->setFlashdata('message', ' dihapus');

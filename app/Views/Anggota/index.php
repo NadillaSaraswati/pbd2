@@ -53,10 +53,7 @@
                                        <td><?= $row['id_jurusan']; ?></td>
                                        <td><?= $row['nama_anggota']; ?></td>
                                        <td><?= $row['no_induk']; ?></td>
-                                       <td>
-                                       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalTambah">
-                                       <i class="fa fa-plus">Tambah</i> </button>
-                                       </td>
+                                      
                                        <td>
                                         <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class"btn btn-sm btn-warning" 
                                         data-id="<?= $row['id_anggota']; ?>" data-id="<?= $row['no_registrasi']; ?>" data-id="<?= $row['id_jurusan']; ?>" data-id="<?= $row['nama_anggota']; ?>" 
@@ -92,7 +89,6 @@
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                        <span aria-hidden="true">&times;</span>
                                    </button>
-                                   <a href="/anggota/tambah/<?= $row['data']; ?>"> </a>
                            </div>
                            <div class="modal-body">
                                <form action="<?= base_url('anggota/tambah'); ?>" method="post"> 
