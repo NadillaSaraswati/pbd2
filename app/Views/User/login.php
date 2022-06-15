@@ -8,7 +8,7 @@
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"></script>
 
-<section class="vh-100" style="background-color: #fd7e14;">
+<section class="vh-100" style="background-color: #224c82;">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -45,7 +45,7 @@
                 ?>
 
                 <div class="d-flex align-items-center mb-3 pb-1">
-                  <i class="fa fa-book fa-2x me-3" style="color: #ff6219;"></i>
+                  <i class="fa fa-book fa-2x me-3" style="color: #2d63a8;"></i>
                   <span class="h1 fw-bold mb-0">SIPUS</span>
                 </div>
 
