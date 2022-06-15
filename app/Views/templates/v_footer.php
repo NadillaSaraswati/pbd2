@@ -29,6 +29,7 @@
  </div>
 
  <!-- Bootstrap core JavaScript-->
+ <script src="assets/js/jquery-3.4.1.min.js"></script>
  <script src="assets/vendor/jquery/jquery.min.js"></script>
  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
