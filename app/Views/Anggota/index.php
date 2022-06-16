@@ -60,7 +60,7 @@
                                         data-id="<?= $row['no_induk']; ?>"> <i class="fa fa-edit"></i> </button>
                                        </td>
                                        <td>
-                                        <button type="button" data-toggle="modal" data-target="#modalHapus" class"btn btn-sm btn-danger" > <i class="fa fa-trash-alt"></i> </button>
+                                        <button type="submit" data-toggle="modal" data-target="#modalHapus" class"btn btn-danger" > <i class="fa fa-trash-alt"></i> </button>
                                        </td>
                                    </tr>
                                    <?php $i++; ?>
@@ -179,8 +179,11 @@
         Apakah Anda Yakin Ingin Menghapus Data Ini?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/anggota/hapus/<?= $row['id_anggota']; ?>" class="btn btn-primary">YA</a>
+        <form action="/anggota/<?= $anggota['id_anggota']; ?>" method="post">
+        <input type="hidden" name="_method" value="HAPUS">
+      </form>
+        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/anggota/hapus/<?= $anggota['id_anggota']; ?>" class="btn btn-primary">YA</a>
       </div>
     </div>
   </div>

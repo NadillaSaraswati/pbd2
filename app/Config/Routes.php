@@ -33,6 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('login','Auth::login');
 $routes->get('/', 'Home::index');
+$routes->get('/anggota/create', 'Anggota::create');
+$routes->delete('/anggota/(:num)', 'Anggota::hapus/$1');
+$routes->get('/anggota/(:any)', 'Anggota::index/$1');
 
 /*
  * --------------------------------------------------------------------
