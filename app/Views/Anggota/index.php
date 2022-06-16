@@ -133,7 +133,7 @@
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                        <span aria-hidden="true">&times;</span>
                                    </button>
-                                   <a href="/anggota/ubah/<?= $row['data']; ?>"> </a>
+                                   <a href="/anggota/ubah/<?= $row['id_anggota']; ?>"> </a>
                            </div>
                            <div class="modal-body">
                                <form action="<?= base_url('anggota/ubah'); ?>" method="post"> 
@@ -178,11 +178,11 @@
         Apakah Anda Yakin Ingin Menghapus Data Ini?
       </div>
       <div class="modal-footer">
-        <form action="/anggota/<?= $anggota['id_anggota']; ?>" method="post">
+        <form action="/anggota/<?= $row['id_anggota']; ?>" method="post">
         <input type="hidden" name="_method" value="HAPUS">
       </form>
         <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/anggota/hapus/<?= $anggota['id_anggota']; ?>" class="btn btn-primary">YA</a>
+        <a href="/anggota/hapus/<?= $row['id_anggota']; ?>" class="btn btn-primary">YA</a>
       </div>
     </div>
   </div>

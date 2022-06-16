@@ -22,7 +22,12 @@ class M_Auth extends Model
 
     public function getAllData()
     {
-        return $this->db->table('perpussmkn2.tabel_buku')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_user')->get()->getResultArray();
+    }
+
+    public function tambah($data)
+    {
+        return $this->db->table('perpussmkn2.tabel_user')->insert($data);
     }
 
    
