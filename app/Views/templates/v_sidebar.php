@@ -10,8 +10,15 @@
             <h1>SIPUS</h1>
         </div>
     </a>
-    <a class="sidebar-brand d-flex align-items-center justify-content-center">
-        <div class="sidebar-brand-text mx-3">admin </div>
+    <a href ="<?= base_url('Profile'); ?>" class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="sidebar-brand-text mx-3"> 
+            <?php if (session()->get('kode_akses')=='a21cd'){
+                echo 'Admin';
+            } else if (session()->get('kode_akses')=='b21cd'){
+                echo 'Sirkulasi';
+            } else{
+                echo 'Pengolahan';
+            } ?></div>
     </a>
 
 
@@ -35,6 +42,12 @@
         <a class="nav-link" href="<?= base_url('Laporan'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Laporan</span></a>
+        <a class="nav-link" href="<?= base_url('user'); ?>">
+            <i class="fas fa-fw fa-user"></i>
+            <span>User</span></a>
+        <a class="nav-link" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>Logout</span></a>
     </li>
 
 
