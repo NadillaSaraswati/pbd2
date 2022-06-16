@@ -58,10 +58,9 @@
                                         <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class"btn btn-sm btn-warning" 
                                         data-id="<?= $row['id_anggota']; ?>" data-id="<?= $row['no_registrasi']; ?>" data-id="<?= $row['id_jurusan']; ?>" data-id="<?= $row['nama_anggota']; ?>" 
                                         data-id="<?= $row['no_induk']; ?>"> <i class="fa fa-edit"></i> </button>
-                                       </td>
-                                       <td>
                                         <button type="submit" data-toggle="modal" data-target="#modalHapus" class"btn btn-danger" > <i class="fa fa-trash-alt"></i> </button>
                                        </td>
+                                      
                                    </tr>
                                    <?php $i++; ?>
                                    <?php  endforeach;?>
