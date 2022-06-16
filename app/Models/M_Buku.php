@@ -21,3 +21,4 @@ class M_Buku extends Model
         return $this->db->table('perpussmkn2.tabel_buku')->insert($data);
     }
 }
+
