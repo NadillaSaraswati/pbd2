@@ -33,11 +33,17 @@ class Peminjaman extends Controller
         $data = [
             'id_peminjaman' => $this->request->getPost('id_peminjaman'),
             'id_anggota' => $this->request->getPost('id_anggota'),
-            'id_user' => $this->request->getPost('id_user'),
             'id_buku' => $this->request->getPost('id_buku'),
-            'tanggal_pinjam' => $this->request->getPost('tanggal_pinjam'),
-            'tanggal_pengembalian' => $this->request->getPost('tanggal_peminjaman'),
+            'id_user' => $this->request->getPost('id_user')
         ];
+
+
+      //insert data
+      $success = $this->model->tambah($data);
+      if ($success){
+          session()->setFlashdata('message', ' ditambahkan');
+          return redirect()->to(base_url('peminjaman'));
+      }
            
 
     }

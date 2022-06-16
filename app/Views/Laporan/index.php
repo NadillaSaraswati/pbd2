@@ -1,6 +1,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
-
+    
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
 
@@ -23,4 +23,9 @@
         <i class="fas fa-fw fa-book"></i>    
         <span>Detail Pengembalian</span>
     </a>
-                 
+
+    <a class="nav-link" href="<?= base_url('Laporan_Inventory'); ?>">
+        <i class="fas fa-fw fa-book"></i>    
+        <span>Laporan Inventory</span>
+    </a>
+</div>

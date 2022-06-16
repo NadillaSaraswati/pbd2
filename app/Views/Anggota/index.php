@@ -40,6 +40,7 @@
                                        <th>Id Jurusan</th>
                                        <th>Nama</th>
                                        <th>No Induk</th>
+                                       <th>Opsi</th>
                                    </tr>
                                </thread>
                                <tbody>
@@ -52,6 +53,15 @@
                                        <td><?= $row['id_jurusan']; ?></td>
                                        <td><?= $row['nama_anggota']; ?></td>
                                        <td><?= $row['no_induk']; ?></td>
+                                      
+                                       <td>
+                                        <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class"btn btn-sm btn-warning" 
+                                        data-id="<?= $row['id_anggota']; ?>" data-id="<?= $row['no_registrasi']; ?>" data-id="<?= $row['id_jurusan']; ?>" data-id="<?= $row['nama_anggota']; ?>" 
+                                        data-id="<?= $row['no_induk']; ?>"> <i class="fa fa-edit"></i> </button>
+                                       </td>
+                                       <td>
+                                        <button type="button" data-toggle="modal" data-target="#modalHapus" class"btn btn-sm btn-danger" > <i class="fa fa-trash-alt"></i> </button>
+                                       </td>
                                    </tr>
                                    <?php $i++; ?>
                                    <?php  endforeach;?>
@@ -70,7 +80,7 @@
 
              
                
-               <!-- Modal -->
+               <!-- Modal Tambah Data Siswa -->
                <div class="modal fade" id="modalTambah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                    <div class="modal-dialog" role="document">
                        <div class="modal-content">
@@ -114,3 +124,64 @@
                </div>
 
 
+
+              <!-- Modal Ubah Data Siswa -->
+              <div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                   <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <h5 class="modal-title">Ubah <?= $judul;?></h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                   </button>
+                                   <a href="/anggota/ubah/<?= $row['data']; ?>"> </a>
+                           </div>
+                           <div class="modal-body">
+                               <form action="<?= base_url('anggota/ubah'); ?>" method="post"> 
+                               <input type="hidden" name="id_anggota" id="id_anggota">
+                               <div class="form-group ab-0 ab-0">
+                                 <label for="id_anggota"></label>
+                                 <input type="text" name="id_anggota" id="id_anggota" class="form-control" placeholder="Masukkan Id Anggota" value="<?= $row ['id_anggota'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="no_registrasi"></label>
+                                 <input type="text" name="no_registrasi" id="no_registrasi" class="form-control" placeholder="Masukkan No Registrasi" value="<?= $row ['no_registrasi'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_jurusan"></label>
+                                 <input type="text" name="id_jurusan" id="id_jurusan" class="form-control" placeholder="Masukkan Id Jurusan" value="<?= $row ['id_jurusan'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="nama_anggota"></label>
+                                 <input type="text" name="nama_anggota" id="nama_anggota" class="form-control" placeholder="Masukkan Nama Anggota" value="<?= $row ['nama_anggota'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="no_induk"></label>
+                                 <input type="text" name="no_induk" id="no_induk" class="form-control" placeholder="Masukkan No Induk Anggota" value="<?= $row ['no_induk'] ?>" >
+                               </div>
+                               
+                           </div>
+                           <div class="modal-footer">
+                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                               <button type="submit" class="btn btn-primary">Ubah Data</button>
+                           </div>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+
+
+<!-- Modal Hapus Data Siswa-->
+<div class="modal fade" id="modalHapus">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        Apakah Anda Yakin Ingin Menghapus Data Ini?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="/anggota/hapus/<?= $row['id_anggota']; ?>" class="btn btn-primary">YA</a>
+      </div>
+    </div>
+  </div>
+</div>

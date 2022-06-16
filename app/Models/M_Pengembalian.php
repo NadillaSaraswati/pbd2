@@ -13,7 +13,12 @@ class M_Pengembalian extends Model
 
     public function getAllData()
     {
-        return $this->db->table('perpussmkn2.tabel_peminjaman, perpussmkn2.tabel_detail_pengembalian,perpussmkn2.tabel_keterangan, perpussmkn2.tabel_user,perpussmkn2.tabel_pengembalian ')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_pengembalian')->get()->getResultArray();
+    }
+
+    public function tambah($data)
+    {
+        return $this->db->table('perpussmkn2.tabel_pengembalian')->insert($data);
     }
 
 }

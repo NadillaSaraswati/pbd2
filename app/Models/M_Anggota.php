@@ -20,4 +20,9 @@ class M_Anggota extends Model
     {
         return $this->db->table('perpussmkn2.tabel_anggota')->insert($data);
     }
+
+    public function hapus($data)
+    {
+        return $this->db->table('perpussmkn2.tabel_anggota')->delete(['data' => $data]);
+    }
 }
