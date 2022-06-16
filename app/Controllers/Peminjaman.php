@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Controllers;
 
@@ -37,14 +37,30 @@ class Peminjaman extends Controller
             'id_user' => $this->request->getPost('id_user')
         ];
 
+        $id_peminjaman = [
+            'id_peminjaman' => $this->request->getPost('id_peminjaman')
+        ];
 
       //insert data
       $success = $this->model->tambah($data);
       if ($success){
           session()->setFlashdata('message', ' ditambahkan');
           return redirect()->to(base_url('peminjaman'));
-      }
-           
+      }  
+
+    }
+
+    public function hapus($data=null)
+    {
+        $success = $this->model->hapus($data=null);
+        if ($success){
+            $data = $this->request->getPost('id_peminjaman');
+            $this->model->hapus($data;
+
+
+            session()->setFlashdata('message', ' dihapus');
+            return redirect()->to(base_url('peminjaman'));
+        }  
 
     }
 }
