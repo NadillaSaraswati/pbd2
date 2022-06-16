@@ -134,7 +134,7 @@
                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                        <span aria-hidden="true">&times;</span>
                                    </button>
-                                   <a href="/anggota/ubah/<?= $row['data']; ?>"> </a>
+                                   <a href="/anggota/ubah/<?= $row['id_anggota']; ?>"> </a>
                            </div>
                            <div class="modal-body">
                                <form action="<?= base_url('anggota/ubah'); ?>" method="post"> 
