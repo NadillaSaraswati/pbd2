@@ -34,6 +34,11 @@
     }
   });
 
+  //modalhapus
+  $(document).on('click', '#btn-hapus', function () {
+    $('.modal-body #id_peminjaman').val($(this).data('id_peminjaman'));
+  }) 
+
   // Scroll to top button appear
   $(document).on('scroll', function() {
     var scrollDistance = $(this).scrollTop();

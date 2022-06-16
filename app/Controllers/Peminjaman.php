@@ -55,7 +55,7 @@ class Peminjaman extends Controller
         $success = $this->model->hapus($data=null);
         if ($success){
             $data = $this->request->getPost('id_peminjaman');
-            $this->model->hapus($data;
+            $this->model->hapus($data);
 
 
             session()->setFlashdata('message', ' dihapus');

@@ -20,4 +20,9 @@ class M_Peminjaman extends Model
     {
         return $this->db->table('perpussmkn2.tabel_peminjaman')->insert($data);
     }
+
+    public function hapus($data=null)
+    {
+        return $this->db->table('perpussmkn2.tabel_peminjaman')->delete($data);
+    }
 }

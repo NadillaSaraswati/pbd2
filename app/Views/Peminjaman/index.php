@@ -1,7 +1,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
               <!-- Begin Page Content -->
-               <div class="container-fluid">
+               <div class="container-fluid"> 
 
                    <!-- Page Heading -->
                    <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
@@ -37,6 +37,7 @@
                                        <th>Id Anggota</th>
                                        <th>Id Buku</th>
                                        <th>Id User</th>
+                                       <th>Opsi</th>
                                    </tr>
                                </thread>
                                <tbody>
@@ -48,6 +49,10 @@
                                        <td><?= $row['id_anggota']; ?></td>
                                        <td><?= $row['id_buku']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
+                                       <td>
+                                        <button type="button" data-toggle="modal" data-target= "#modalHapus" id="btn-hapus" class="btn btn-sm btn-danger" data-id="<?= $row['id_peminjaman']; ?>" > <i class="fa fa-trash-alt" ></i></button>
+                                       </td>
+                              
                                    </tr>
                                    <?php $i++; ?>
                                    <?php  endforeach;?>
@@ -104,3 +109,24 @@
                    </div>
                </div>
 
+
+               
+               <!-- Modal Hapus Data Peminjaman-->
+               <div class="modal fade" id="modalHapus" >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <form action="/peminjaman/hapus" method="post">
+                    <div class="modal-body">
+                      Apakah Anda yakin ingin menghapus data ini?
+                      <input type="hidden" id="id_peminjaman" name="id_peminjaman">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Yakin</button>
+                    </div>
+                                    </form>
+                  </div>
+                </div>
+               </div>
+
+               
