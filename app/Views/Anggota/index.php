@@ -179,11 +179,11 @@
         Apakah Anda Yakin Ingin Menghapus Data Ini?
       </div>
       <div class="modal-footer">
-        <form action="/anggota/<?= $anggota['id_anggota']; ?>" method="post">
+        <form action="/anggota/<?= $row['id_anggota']; ?>" method="post">
         <input type="hidden" name="_method" value="HAPUS">
       </form>
         <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/anggota/hapus/<?= $anggota['id_anggota']; ?>" class="btn btn-primary">YA</a>
+        <a href="/anggota/hapus/<?= $row['id_anggota']; ?>" class="btn btn-primary">YA</a>
       </div>
     </div>
   </div>
