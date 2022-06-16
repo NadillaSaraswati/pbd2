@@ -61,8 +61,17 @@ class Auth extends BaseController
         } else {
             //jika tidak valid
             session()->setFlashdata('errors', \Config\Services::validation()->getErrors());
-            return redirect()->to(base_url('Auth/login')); 
-
+            return redirect()->to(base_url('Auth/login'));
         }
+    }
+
+    public function logout()
+    {
+        session()->remove('log');
+        session()->remove('nama_user');
+        session()->remove('id_user');
+        session()->remove('kode_akses');
+        session()->remove('alamat_user');
+        return redirect()->to(base_url('Auth/login'));
     }
 }
