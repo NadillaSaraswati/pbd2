@@ -9,6 +9,12 @@ class Transaksi extends Controller
 {
     public function index()
     {
+        if (session()->get('kode_akses') == 'a21cd' || session()->get('kode_akses') == 'b21cd'){
+            redirect()->to(base_url('transaksi'));
+        } else {
+            return redirect()->to(base_url('home'));
+        }
+           
         $model = new M_Transaksi();
         $data = [
             'judul' => 'Transaksi',

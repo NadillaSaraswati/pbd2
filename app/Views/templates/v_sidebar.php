@@ -26,25 +26,40 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
+
     <li class="nav-item">
         <a class="nav-link" href="<?= base_url(); ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
+        
+        <?php if (session()->get('kode_akses') == 'a21cd') { ?>
         <a class="nav-link" href="<?= base_url('Anggota'); ?>">
             <i class="fas fa-fw fa-list"></i>
             <span>Anggota</span></a>
+            <?php } ?>
+        
+        <?php if (session()->get('kode_akses') == 'a21cd' || session()->get('kode_akses') == 'c21cd') { ?>
         <a class="nav-link" href="<?= base_url('Buku'); ?>">
             <i class="fas fa-fw fa-book"></i>
             <span>Buku</span></a>
+            <?php } ?>
+
+        <?php if (session()->get('kode_akses') == 'a21cd' || session()->get('kode_akses') == 'b21cd') { ?>
         <a class="nav-link" href="<?= base_url('Transaksi'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Transaksi</span></a>
+            <?php } ?>
+
         <a class="nav-link" href="<?= base_url('Laporan'); ?>">
             <i class="fas fa-fw fa-table"></i>
             <span>Laporan</span></a>
+
+        <?php if (session()->get('kode_akses') == 'a21cd') { ?>
         <a class="nav-link" href="<?= base_url('user'); ?>">
             <i class="fas fa-fw fa-user"></i>
             <span>User</span></a>
+            <?php } ?>
+
         <a class="nav-link" href="<?= base_url('auth/logout'); ?>" data-toggle="modal" data-target="#logoutModal">
             <i class="fas fa-sign-out-alt"></i>
             <span>Logout</span></a>

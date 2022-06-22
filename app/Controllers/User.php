@@ -7,7 +7,7 @@ use App\Models\M_Auth;
 
 class User extends Controller
 {
-    public function __construct ()
+    public function __construct()
     {
         $this->model = new M_Auth;
     }
@@ -15,6 +15,9 @@ class User extends Controller
 
     public function index()
     {
+        if (session()->get('kode_akses') <> 'a21cd') {
+            return redirect()->to(base_url('home'));
+        }
         $data = [
             'judul' => 'User',
             'user' => $this->model->getAllData()
@@ -28,6 +31,7 @@ class User extends Controller
         echo view('templates/v_footer');
     }
 
+
     public function tambah()
     {
         $data = [
@@ -37,22 +41,14 @@ class User extends Controller
             'nama_user' => $this->request->getPost('nama_user'),
             'telepon_user' => $this->request->getPost('telepon_user'),
             'alamat_user' => $this->request->getPost('alamat_user')
-            
-        ];
-           
 
-        
+        ];
 
         //insert data
         $success = $this->model->tambah($data);
-        if ($success){
+        if ($success) {
             session()->setFlashdata('message', ' ditambahkan');
             return redirect()->to(base_url('user'));
         }
-
-
     }
-
-
-
 }

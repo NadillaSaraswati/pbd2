@@ -7,6 +7,8 @@ use App\Models\M_Anggota;
 
 class Anggota extends Controller
 {
+    
+
     public function __construct ()
     {
         $this->model = new M_Anggota;
@@ -14,7 +16,9 @@ class Anggota extends Controller
 
     public function index()
     {
-       
+        if (session()->get('kode_akses') <> 'a21cd') {
+            return redirect()->to(base_url('home'));
+        }
         $data = [
             'judul' => 'Data Anggota',
             'anggota' => $this->model->getAllData()

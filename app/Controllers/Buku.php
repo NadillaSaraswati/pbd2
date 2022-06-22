@@ -7,14 +7,18 @@ use App\Models\M_Buku;
 
 class Buku extends Controller
 {
-    public function __construct ()
+    public function __construct()
     {
         $this->model = new M_Buku;
     }
 
     public function index()
     {
-       
+        if (session()->get('kode_akses') == 'a21cd' || session()->get('kode_akses') == 'c21cd') {
+            redirect()->to(base_url('buku'));
+        } else {
+            return redirect()->to(base_url('home'));
+        }
         $data = [
             'judul' => 'Data Buku',
             'buku' => $this->model->getAllData()
@@ -39,17 +43,15 @@ class Buku extends Controller
             'id_jenis' => $this->request->getPost('id_jenis'),
             'judul_buku' => $this->request->getPost('judul_buku')
         ];
-           
 
-        
+
+
 
         //insert data
         $success = $this->model->tambah($data);
-        if ($success){
+        if ($success) {
             session()->setFlashdata('message', ' ditambahkan');
             return redirect()->to(base_url('buku'));
         }
-
-
     }
 }
