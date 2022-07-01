@@ -1,4 +1,11 @@
 # CodeIgniter 4 Application Starter
+## Jika error saat 'php spark serve'
+
+https://drive.google.com/drive/folders/15S9rWTsg05YdJAprd2-KxYYRMS5W-j1A?usp=sharing
+
+Ikuti link di atas jika mendapatkan error seperti di bawah saat melakukan ‘php spark serve’:
+
+“php fatal error: uncaught typeerror: argument 1 passed to codeigniter\cli\console::__construct() must be an instance of codeigniter\codeigniter, int given, called in…”
 
 ## What is CodeIgniter?
 
