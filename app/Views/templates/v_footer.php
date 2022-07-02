@@ -39,6 +39,9 @@
  <!-- Custom scripts for all pages-->
  <script src="assets/js/sb-admin-2.min.js"></script>
 
+ <!-- script.js-->
+ <script src="assets/js/script.js"></script>
+
  </body>
 
  </html>
