@@ -67,9 +67,6 @@ class Anggota extends Controller
             'no_induk' => $this->request->getPost('no_induk')
         ];
            
-
-        
-
         //update  data
         $success = $this->model->ubah($data, $id_anggota);
         if ($success){
@@ -80,6 +77,7 @@ class Anggota extends Controller
 
     }
 
+    //Hapus data
     public function hapus()
     {
         $id_anggota = $this->request->getPost('id_anggota');
