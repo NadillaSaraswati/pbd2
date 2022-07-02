@@ -21,4 +21,14 @@ class M_Pengembalian extends Model
         return $this->db->table('perpussmkn2.tabel_pengembalian')->insert($data);
     }
 
+    public function hapus($id_pengembalian)
+    {
+        return $this->db->table('perpussmkn2.tabel_pengembalian')->delete(['id_pengembalian' => $id_pengembalian]);
+    }
+
+    public function ubah($data, $id_pengembalian)
+    {
+        return $this->db->table('perpussmkn2.tabel_pengembalian')->update($data, ['id_pengembalian' => $id_pengembalian]);
+    }
+
 }
