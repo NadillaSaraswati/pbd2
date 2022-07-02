@@ -54,4 +54,44 @@ class Buku extends Controller
             return redirect()->to(base_url('buku'));
         }
     }
+
+    
+    public function ubah()
+    {
+        $id_buku = $this->request->getPost('id_buku');
+        
+        $data = [
+            'id_buku' => $this->request->getPost('id_buku'),
+            'id_perolehan' => $this->request->getPost('id_perolehan'),
+            'id_status' => $this->request->getPost('id_status'),
+            'id_penerbit' => $this->request->getPost('id_penerbit'),
+            'id_subyek' => $this->request->getPost('id_subyek'),
+            'id_jenis' => $this->request->getPost('id_jenis'),
+            'judul_buku' => $this->request->getPost('judul_buku')
+        ];
+           
+
+        
+
+        //update  data
+        $success = $this->model->ubah($data, $id_buku);
+        if ($success){
+            session()->setFlashdata('message', ' diubah');
+            return redirect()->to(base_url('buku'));
+        }
+
+
+    }
+
+    public function hapus()
+    {
+        $id_buku = $this->request->getPost('id_buku');
+        
+        $success = $this->model->hapus($id_buku);
+        if ($success){
+            session()->setFlashdata('message', ' dihapus');
+            return redirect()->to(base_url('buku'));
+        }
+    }
+
 }

@@ -20,5 +20,15 @@ class M_Buku extends Model
     {
         return $this->db->table('perpussmkn2.tabel_buku')->insert($data);
     }
+    
+    public function hapus($id_buku)
+    {
+        return $this->db->table('perpussmkn2.tabel_buku')->delete(['id_buku' => $id_buku]);
+    }
+
+    public function ubah($data, $id_buku)
+    {
+        return $this->db->table('perpussmkn2.tabel_buku')->update($data, ['id_buku' => $id_buku]);
+    }
 }
 
