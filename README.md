@@ -1,5 +1,5 @@
 # CodeIgniter 4 Application Starter
-## Yang perlu dibuat untuk menambahkan Ubah dan Hapus data (contoh untuk Data Buku):
+## Yang perlu dibuat untuk Update dan Delete data (contoh untuk Data Buku):
 
 https://github.com/NadillaSaraswati/pbd2/commit/12810961794c37195b37bd6ffb057a0018a4a5c7
 
