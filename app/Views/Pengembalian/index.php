@@ -37,6 +37,7 @@
                                        <th>Id Anggota</th>
                                        <th>Id User</th>
                                        <th>Id Peminjaman</th>
+                                       <th>Opsi</th>
                                    </tr>
                                </thread>
                                <tbody>
@@ -48,6 +49,13 @@
                                        <td><?= $row['id_anggota']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
                                        <td><?= $row['id_peminjaman']; ?></td>
+                                       <td>
+                                       <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
+                                        data-id_pengembalian="<?= $row['id_pengembalian']; ?>" data-id_anggota="<?= $row['id_anggota']; ?>" data-id_user="<?= $row['id_user']; ?>" data-id_peminjaman="<?= $row['id_peminjaman']; ?>" 
+                                        > <i class="fa fa-edit"></i> </button>
+                                        <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_pengembalian="<?= $row['id_pengembalian']; ?>"> 
+                                        <i class="fa fa-trash-alt"></i> </button>
+                                       </td>
                                    </tr>
                                    <?php $i++; ?>
                                    <?php  endforeach;?>
@@ -65,7 +73,7 @@
                <!-- End of Main Content -->
 
                  
-               <!-- Modal -->
+               <!-- Modal tambah -->
                <div class="modal fade" id="modalTambah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                    <div class="modal-dialog" role="document">
                        <div class="modal-content">
@@ -103,4 +111,68 @@
                        </div>
                    </div>
                </div>
+
+                <!-- Modal Ubah Data  -->
+              <div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                   <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <h5 class="modal-title">Ubah <?= $judul;?></h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                   </button>
+                                   <a href="/pengembalian/ubah/<?= $row['id_pengembalian']; ?>"> </a>
+                           </div>
+                           <div class="modal-body">
+                               <form action="<?= base_url('pengembalian/ubah'); ?>" method="post"> 
+                               <input type="hidden" name="id_pengembalian" id="id_pengembalian">
+                               <div class="form-group ab-0 ab-0">
+                                 <label for="id_pengembalian"></label>
+                                 <input readonly type="text" name="id_pengembalian" id="id_pengembalian" class="form-control" placeholder="Masukkan Id pengembalian" value="<?= $row ['id_pengembalian'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_anggota"></label>
+                                 <input type="text" name="id_anggota" id="id_anggota" class="form-control" placeholder="Masukkan id Anggota" value="<?= $row ['id_anggota'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_user"></label>
+                                 <input type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan Id user" value="<?= $row ['id_user'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_peminjaman"></label>
+                                 <input type="text" name="id_peminjaman" id="id_peminjaman" class="form-control" placeholder="Masukkan id peminjaman" value="<?= $row ['id_peminjaman'] ?>" >
+                               </div>
+          
+                               
+                           </div>
+                           <div class="modal-footer">
+                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                               <button type="submit" class="btn btn-primary">Ubah Data</button>
+                           </div>
+                           </form>
+                       </div>
+                   </div>
+               </div>
+
+
+<!-- Modal Hapus Data -->
+<div class="modal fade" id="modalHapus">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="/pengembalian/hapus" method="post">
+        <div class="modal-body">
+          Apakah anda yakin ingin menghapus data ini?
+          <input type="hidden" id="id_pengembalian" name="id_pengembalian">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Yakin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+               
 
