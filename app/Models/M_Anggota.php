@@ -25,4 +25,9 @@ class M_Anggota extends Model
     {
         return $this->db->table('perpussmkn2.tabel_anggota')->delete(['data' => $data]);
     }
+
+    public function ubah($data, $id_anggota)
+    {
+        return $this->db->table('perpussmkn2.tabel_anggota')->update($data, ['id_anggota' => $id_anggota]);
+    }
 }

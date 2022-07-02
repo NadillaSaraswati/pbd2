@@ -57,6 +57,8 @@ class Anggota extends Controller
 
     public function ubah()
     {
+        $id_anggota = $this->request->getPost('id_anggota');
+        
         $data = [
             'id_anggota' => $this->request->getPost('id_anggota'),
             'no_registrasi' => $this->request->getPost('no_registrasi'),
