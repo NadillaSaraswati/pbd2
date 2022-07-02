@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class M_Auth extends Model
 {
 
-    public function __construct ()
+    public function __construct()
     {
         $this->db = db_connect();
     }
@@ -29,6 +29,13 @@ class M_Auth extends Model
     {
         return $this->db->table('perpussmkn2.tabel_user')->insert($data);
     }
+    public function hapus($id_user)
+    {
+        return $this->db->table('perpussmkn2.tabel_user')->delete(['id_user' => $id_user]);
+    }
 
-   
+    public function ubah($data, $id_user)
+    {
+        return $this->db->table('perpussmkn2.tabel_user')->update($data, ['id_user' => $id_user]);
+    }
 }
