@@ -21,5 +21,13 @@ class M_Peminjaman extends Model
         return $this->db->table('perpussmkn2.tabel_peminjaman')->insert($data);
     }
 
-  
+    public function hapus($id_peminjaman)
+    {
+        return $this->db->table('perpussmkn2.tabel_peminjaman')->delete(['id_peminjaman' => $id_peminjaman]);
+    }
+
+    public function ubah($data, $id_peminjaman)
+    {
+        return $this->db->table('perpussmkn2.tabel_peminjaman')->update($data, ['id_peminjaman' => $id_peminjaman]);
+    }
 }
