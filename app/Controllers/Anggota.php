@@ -80,11 +80,15 @@ class Anggota extends Controller
 
     }
 
-    public function hapus($id)
+    public function hapus()
     {
-        $this->anggotaModel->delete($id);
-        session()->setFlahdata('pesan', 'Data berhasil dihapus.');
-        return redirect()->to(base_url('anggota'));
+        $id_anggota = $this->request->getPost('id_anggota');
+        
+        $success = $this->model->hapus($id_anggota);
+        if ($success){
+            session()->setFlashdata('message', ' dihapus');
+            return redirect()->to(base_url('anggota'));
+        }
     }
 
 }

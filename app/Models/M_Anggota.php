@@ -21,9 +21,9 @@ class M_Anggota extends Model
         return $this->db->table('perpussmkn2.tabel_anggota')->insert($data);
     }
 
-    public function hapus($data)
+    public function hapus($id_anggota)
     {
-        return $this->db->table('perpussmkn2.tabel_anggota')->delete(['data' => $data]);
+        return $this->db->table('perpussmkn2.tabel_anggota')->delete(['id_anggota' => $id_anggota]);
     }
 
     public function ubah($data, $id_anggota)

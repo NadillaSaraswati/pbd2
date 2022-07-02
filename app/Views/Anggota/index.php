@@ -58,7 +58,8 @@
                                         <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class"btn btn-sm btn-warning" 
                                         data-id_anggota="<?= $row['id_anggota']; ?>" data-no_registrasi="<?= $row['no_registrasi']; ?>" data-id_jurusan="<?= $row['id_jurusan']; ?>" data-nama_anggota="<?= $row['nama_anggota']; ?>" 
                                         data-no_induk="<?= $row['no_induk']; ?>"> <i class="fa fa-edit"></i> </button>
-                                        <button type="submit" data-toggle="modal" data-target="#modalHapus" class"btn btn-danger" > <i class="fa fa-trash-alt"></i> </button>
+                                        <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_anggota="<?= $row['id_anggota']; ?>"> 
+                                        <i class="fa fa-trash-alt"></i> </button>
                                        </td>
                                       
                                    </tr>
@@ -174,16 +175,16 @@
 <div class="modal fade" id="modalHapus">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-body">
-        Apakah Anda Yakin Ingin Menghapus Data Ini?
-      </div>
-      <div class="modal-footer">
-        <form action="/anggota/<?= $row['id_anggota']; ?>" method="post">
-        <input type="hidden" name="_method" value="HAPUS">
+      <form action="/anggota/hapus" method="post">
+        <div class="modal-body">
+          Apakah anda yakin ingin menghapus data ini?
+          <input type="hidden" id="id_anggota" name="id_anggota">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Yakin</button>
+        </div>
       </form>
-        <button type="submit" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <a href="/anggota/hapus/<?= $row['id_anggota']; ?>" class="btn btn-primary">YA</a>
-      </div>
     </div>
   </div>
 </div>
