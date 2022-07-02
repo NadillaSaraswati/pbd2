@@ -140,7 +140,7 @@
                                <input type="hidden" name="id_anggota" id="id_anggota">
                                <div class="form-group ab-0 ab-0">
                                  <label for="id_anggota"></label>
-                                 <input type="text" name="id_anggota" id="id_anggota" class="form-control" placeholder="Masukkan Id Anggota" value="<?= $row ['id_anggota'] ?>" >
+                                 <input readonly type="text" name="id_anggota" id="id_anggota" class="form-control" placeholder="Masukkan Id Anggota" value="<?= $row ['id_anggota'] ?>" >
                                </div>
                                <div class="form-group ab-0">
                                  <label for="no_registrasi"></label>
