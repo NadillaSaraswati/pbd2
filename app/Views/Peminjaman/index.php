@@ -50,7 +50,11 @@
                                        <td><?= $row['id_buku']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
                                        <td>
-                                        <button type="button" data-toggle="modal" data-target= "#modalHapus" id="btn-hapus" class="btn btn-sm btn-danger" data-id="<?= $row['id_peminjaman']; ?>" > <i class="fa fa-trash-alt" ></i></button>
+                                       <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
+                                        data-id_peminjaman="<?= $row['id_peminjaman']; ?>" data-id_anggota="<?= $row['id_anggota']; ?>" data-id_buku="<?= $row['id_buku']; ?>" data-id_user="<?= $row['id_user']; ?>" 
+                                        > <i class="fa fa-edit"></i> </button>
+                                        <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_peminjaman="<?= $row['id_peminjaman']; ?>"> 
+                                        <i class="fa fa-trash-alt"></i> </button>
                                        </td>
                               
                                    </tr>
@@ -111,22 +115,68 @@
 
 
                
-               <!-- Modal Hapus Data Peminjaman-->
-               <div class="modal fade" id="modalHapus" >
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <form action="/peminjaman/hapus" method="post">
-                    <div class="modal-body">
-                      Apakah Anda yakin ingin menghapus data ini?
-                      <input type="hidden" id="id_peminjaman" name="id_peminjaman">
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="submit" class="btn btn-primary">Yakin</button>
-                    </div>
-                                    </form>
-                  </div>
-                </div>
+             
+
+                 <!-- Modal Ubah Data Siswa -->
+              <div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                   <div class="modal-dialog" role="document">
+                       <div class="modal-content">
+                           <div class="modal-header">
+                               <h5 class="modal-title">Ubah <?= $judul;?></h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                       <span aria-hidden="true">&times;</span>
+                                   </button>
+                                   <a href="/peminjaman/ubah/<?= $row['id_peminjaman']; ?>"> </a>
+                           </div>
+                           <div class="modal-body">
+                               <form action="<?= base_url('peminjaman/ubah'); ?>" method="post"> 
+                               <input type="hidden" name="id_peminjaman" id="id_peminjaman">
+                               <div class="form-group ab-0 ab-0">
+                                 <label for="id_peminjaman"></label>
+                                 <input readonly type="text" name="id_peminjaman" id="id_peminjaman" class="form-control" placeholder="Masukkan Id Peminjaman" value="<?= $row ['id_peminjaman'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_anggota"></label>
+                                 <input type="text" name="id_anggota" id="id_anggota" class="form-control" placeholder="Masukkan id Anggota" value="<?= $row ['id_anggota'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_buku"></label>
+                                 <input type="text" name="id_buku" id="id_buku" class="form-control" placeholder="Masukkan Id Buku" value="<?= $row ['id_buku'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_user"></label>
+                                 <input type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan id User" value="<?= $row ['id_user'] ?>" >
+                               </div>
+          
+                               
+                           </div>
+                           <div class="modal-footer">
+                               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                               <button type="submit" class="btn btn-primary">Ubah Data</button>
+                           </div>
+                           </form>
+                       </div>
+                   </div>
                </div>
+
+
+<!-- Modal Hapus Data -->
+<div class="modal fade" id="modalHapus">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="/peminjaman/hapus" method="post">
+        <div class="modal-body">
+          Apakah anda yakin ingin menghapus data ini?
+          <input type="hidden" id="id_peminjaman" name="id_peminjaman">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Yakin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
                

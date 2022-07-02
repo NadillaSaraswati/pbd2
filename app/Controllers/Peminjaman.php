@@ -50,17 +50,42 @@ class Peminjaman extends Controller
 
     }
 
-    public function hapus($data=null)
+
+    public function ubah()
     {
-        $success = $this->model->hapus($data=null);
+        $id_peminjaman = $this->request->getPost('id_peminjaman');
+        
+        $data = [
+            'id_peminjaman' => $this->request->getPost('id_peminjaman'),
+            'id_anggota' => $this->request->getPost('id_anggota'),
+            'id_buku' => $this->request->getPost('id_buku'),
+            'id_user' => $this->request->getPost('id_user'),
+            
+        ];
+           
+
+        
+
+        //update  data
+        $success = $this->model->ubah($data, $id_peminjaman);
         if ($success){
-            $data = $this->request->getPost('id_peminjaman');
-            $this->model->hapus($data);
-
-
-            session()->setFlashdata('message', ' dihapus');
+            session()->setFlashdata('message', ' diubah');
             return redirect()->to(base_url('peminjaman'));
-        }  
+        }
+
 
     }
+
+    public function hapus()
+    {
+        $id_peminjaman = $this->request->getPost('id_peminjaman');
+        
+        $success = $this->model->hapus($id_peminjaman);
+        if ($success){
+            session()->setFlashdata('message', ' dihapus');
+            return redirect()->to(base_url('peminjaman'));
+        }
+    }
+
+
 }
