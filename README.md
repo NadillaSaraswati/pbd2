@@ -1,4 +1,8 @@
 # CodeIgniter 4 Application Starter
+## Yang perlu dibuat untuk Update dan Delete data (contoh untuk Data Buku):
+
+https://github.com/NadillaSaraswati/pbd2/commit/12810961794c37195b37bd6ffb057a0018a4a5c7
+
 ## Jika error saat 'php spark serve'
 
 https://drive.google.com/drive/folders/15S9rWTsg05YdJAprd2-KxYYRMS5W-j1A?usp=sharing
