@@ -50,6 +50,7 @@ class User extends Controller
             session()->setFlashdata('message', ' ditambahkan');
             return redirect()->to(base_url('user'));
         }
+
     }
 
     public function ubah()
@@ -63,11 +64,7 @@ class User extends Controller
             'nama_user' => $this->request->getPost('nama_user'),
             'telepon_user' => $this->request->getPost('telepon_user'),
             'alamat_user' => $this->request->getPost('alamat_user'),
-
         ];
-           
-
-        
 
         //update  data
         $success = $this->model->ubah($data, $id_user);
@@ -75,8 +72,6 @@ class User extends Controller
             session()->setFlashdata('message', ' diubah');
             return redirect()->to(base_url('user'));
         }
-
-
     }
 
     public function hapus()

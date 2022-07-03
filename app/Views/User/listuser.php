@@ -138,6 +138,7 @@
         <form action="<?= base_url('user/ubah'); ?>" method="post">
           <input type="hidden" name="id_user" id="id_user">
           <div class="form-group ab-0 ab-0">
+            
             <label for="id_user"></label>
             <input readonly type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan Id user" value="<?= $row['id_user'] ?>">
           </div>

@@ -34,12 +34,12 @@
                                    <tr>
                                        <th>No</th>
                                        <th>Id Buku</th>
-                                       <th>Id Perolehan</th>
-                                       <th>Id Status</th>
-                                       <th>Id Pengarang</th>
-                                       <th>Id Penerbit</th>
-                                       <th>Id Subyek</th>
-                                       <th>Id Jenis</th>
+                                       <th>Perolehan</th>
+                                       <th>Status</th>
+                                       <th>Pengarang</th>
+                                       <th>Penerbit</th>
+                                       <th>Subyek</th>
+                                       <th>Jenis</th>
                                        <th>Judul Buku</th>
                                        <th>aksi</th>
                                    </tr>
@@ -50,17 +50,17 @@
                                    <tr>
                                        <td scope="row"><?= $i; ?></td>
                                        <td><?= $row['id_buku']; ?></td>
-                                       <td><?= $row['id_perolehan']; ?></td>
-                                       <td><?= $row['id_status']; ?></td>
-                                       <td><?= $row['id_pengarang']; ?></td>
-                                       <td><?= $row['id_penerbit']; ?></td>
-                                       <td><?= $row['id_subyek']; ?></td>
-                                       <td><?= $row['id_jenis']; ?></td>
+                                       <td><?= $row['perolehan']; ?></td>
+                                       <td><?= $row['status']; ?></td>
+                                       <td><?= $row['nama_pengarang']; ?></td>
+                                       <td><?= $row['nama_penerbit']; ?></td>
+                                       <td><?= $row['subyek_buku']; ?></td>
+                                       <td><?= $row['jenis_koleksi']; ?></td>
                                        <td><?= $row['judul_buku']; ?></td>
                                        <td>
                                         <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
-                                        data-id_buku="<?= $row['id_buku']; ?>" data-id_perolehan="<?= $row['id_perolehan']; ?>" data-id_status="<?= $row['id_status']; ?>" data-id_pengarang="<?= $row['id_pengarang']; ?>" data-id_penerbit="<?= $row['id_penerbit']; ?>" 
-                                        data-id_subyek="<?= $row['id_subyek']; ?>" data-id_jenis="<?= $row['id_jenis']; ?>" data-judul_buku="<?= $row['judul_buku']; ?>"> <i class="fa fa-edit"></i> </button>
+                                        data-id_buku="<?= $row['id_buku']; ?>" data-perolehan="<?= $row['perolehan']; ?>" data-status="<?= $row['status']; ?>" data-nama_pengarang="<?= $row['nama_pengarang']; ?>" data-nama_penerbit="<?= $row['nama_penerbit']; ?>" 
+                                        data-subyek_buku="<?= $row['subyek_buku']; ?>" data-jenis_koleksi="<?= $row['jenis_koleksi']; ?>" data-judul_buku="<?= $row['judul_buku']; ?>"> <i class="fa fa-edit"></i> </button>
                                         <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_buku="<?= $row['id_buku']; ?>"> 
                                         <i class="fa fa-trash-alt"></i> </button>
                                        </td>

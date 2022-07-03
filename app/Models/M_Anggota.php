@@ -13,7 +13,9 @@ class M_Anggota extends Model
 
     public function getAllData()
     {
-        return $this->db->table('perpussmkn2.tabel_anggota')->get()->getResultArray();
+        return $this->db->table('perpussmkn2.tabel_anggota')
+        ->join('perpussmkn2.tabel_jurusan', 'perpussmkn2.tabel_jurusan.id_jurusan = perpussmkn2.tabel_anggota.id_jurusan')
+        ->get()->getResultArray();
     }
 
     public function tambah($data)
