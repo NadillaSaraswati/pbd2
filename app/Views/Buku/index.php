@@ -36,6 +36,7 @@
                                        <th>Id Buku</th>
                                        <th>Id Perolehan</th>
                                        <th>Id Status</th>
+                                       <th>Id Pengarang</th>
                                        <th>Id Penerbit</th>
                                        <th>Id Subyek</th>
                                        <th>Id Jenis</th>
@@ -51,13 +52,14 @@
                                        <td><?= $row['id_buku']; ?></td>
                                        <td><?= $row['id_perolehan']; ?></td>
                                        <td><?= $row['id_status']; ?></td>
+                                       <td><?= $row['id_pengarang']; ?></td>
                                        <td><?= $row['id_penerbit']; ?></td>
                                        <td><?= $row['id_subyek']; ?></td>
                                        <td><?= $row['id_jenis']; ?></td>
                                        <td><?= $row['judul_buku']; ?></td>
                                        <td>
                                         <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
-                                        data-id_buku="<?= $row['id_buku']; ?>" data-id_perolehan="<?= $row['id_perolehan']; ?>" data-id_status="<?= $row['id_status']; ?>" data-id_penerbit="<?= $row['id_penerbit']; ?>" 
+                                        data-id_buku="<?= $row['id_buku']; ?>" data-id_perolehan="<?= $row['id_perolehan']; ?>" data-id_status="<?= $row['id_status']; ?>" data-id_pengarang="<?= $row['id_pengarang']; ?>" data-id_penerbit="<?= $row['id_penerbit']; ?>" 
                                         data-id_subyek="<?= $row['id_subyek']; ?>" data-id_jenis="<?= $row['id_jenis']; ?>" data-judul_buku="<?= $row['judul_buku']; ?>"> <i class="fa fa-edit"></i> </button>
                                         <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_buku="<?= $row['id_buku']; ?>"> 
                                         <i class="fa fa-trash-alt"></i> </button>
@@ -102,6 +104,10 @@
                                <div class="form-group ab-0">
                                  <label for="id_status"></label>
                                  <input type="text" name="id_status" id="id_status" class="form-control" placeholder="Masukkan Id Status" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="id_pengarang"></label>
+                                 <input type="text" name="id_pengarang" id="id_pengarang" class="form-control" placeholder="Masukkan Id Pengarang" >
                                </div>
                                <div class="form-group ab-0">
                                  <label for="id_penerbit"></label>
@@ -155,6 +161,10 @@
                                <div class="form-group ab-0 ab-0">
                                  <label for="id_status"></label>
                                  <input type="text" name="id_status" id="id_status" class="form-control" placeholder="Masukkan Id status" value="<?= $row ['id_status'] ?>" >
+                               </div>
+                               <div class="form-group ab-0 ab-0">
+                                 <label for="id_pengarang"></label>
+                                 <input type="text" name="id_pengarang" id="id_pengarang" class="form-control" placeholder="Masukkan Id pengarang" value="<?= $row ['id_penerbit'] ?>" >
                                </div>
                                <div class="form-group ab-0 ab-0">
                                  <label for="id_penerbit"></label>

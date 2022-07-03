@@ -17,6 +17,7 @@ $(document).on('click', '#btn-edit', function () {
   $('.modal-body #id_buku').val($(this).data('id_buku'));
   $('.modal-body #id_perolehan').val($(this).data('id_perolehan'));
   $('.modal-body #id_status').val($(this).data('id_status'));
+  $('.modal-body #id_pengarang').val($(this).data('id_pengarang'));
   $('.modal-body #id_penerbit').val($(this).data('id_penerbit'));
   $('.modal-body #id_subyek').val($(this).data('id_subyek'));
   $('.modal-body #id_jenis').val($(this).data('id_jenis'));

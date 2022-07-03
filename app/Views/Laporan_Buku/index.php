@@ -22,6 +22,7 @@
                         <th>Id Buku</th>
                         <th>Id Perolehan</th>
                         <th>Id Status</th>
+                        <th>Id Pengarang</th>
                         <th>Id Penerbit</th>
                         <th>Id Subyek</th>
                         <th>Id Jenis</th>
@@ -36,6 +37,7 @@
                             <td><?= $row['id_buku']; ?></td>
                             <td><?= $row['id_perolehan']; ?></td>
                             <td><?= $row['id_status']; ?></td>
+                            <td><?= $row['id_pengarang']; ?></td>
                             <td><?= $row['id_penerbit']; ?></td>
                             <td><?= $row['id_subyek']; ?></td>
                             <td><?= $row['id_jenis']; ?></td>
