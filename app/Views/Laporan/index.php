@@ -23,9 +23,4 @@
         <i class="fas fa-fw fa-book"></i>    
         <span>Detail Pengembalian</span>
     </a>
-
-    <a class="nav-link" href="<?= base_url('Laporan_Inventory'); ?>">
-        <i class="fas fa-fw fa-book"></i>    
-        <span>Laporan Inventory</span>
-    </a>
 </div>
