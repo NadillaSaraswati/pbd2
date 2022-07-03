@@ -34,27 +34,29 @@
                                    <tr>
                                        <th>No</th>
                                        <th>Id Peminjaman</th>
-                                       <th>Id Anggota</th>
-                                       <th>Id Buku</th>
+                                       <th>Nama Anggota</th>
+                                       <th>Judul Buku</th>
                                        <th>Id User</th>
                                        <th>Opsi</th>
                                    </tr>
                                </thread>
                                <tbody>
                                    <?php $i=1; ?>
-                                    <?php  foreach($peminjaman as $row) :?>
+                                    <?php  foreach($peminjaman as $key => $row) :?>
                                    <tr>
                                        <td scope="row"><?= $i; ?></td>
                                        <td><?= $row['id_peminjaman']; ?></td>
-                                       <td><?= $row['id_anggota']; ?></td>
-                                       <td><?= $row['id_buku']; ?></td>
+                                       <td><?= $row['nama_anggota']; ?></td>
+                                       <td><?= $row['judul_buku']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
                                        <td>
                                        <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
-                                        data-id_peminjaman="<?= $row['id_peminjaman']; ?>" data-id_anggota="<?= $row['id_anggota']; ?>" data-id_buku="<?= $row['id_buku']; ?>" data-id_user="<?= $row['id_user']; ?>" 
+                                        data-id_peminjaman="<?= $row['id_peminjaman']; ?>" data-nama_anggota="<?= $row['nama_anggota']; ?>" data-judul_buku="<?= $row['judul_buku']; ?>" data-id_user="<?= $row['id_user']; ?>" 
                                         > <i class="fa fa-edit"></i> </button>
                                         <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_peminjaman="<?= $row['id_peminjaman']; ?>"> 
                                         <i class="fa fa-trash-alt"></i> </button>
+                                        <a href ="<?php echo base_url(); ?>peminjaman/cetak/<?php echo $row['id_peminjaman']; ?>" button type="button" data-toggle="modal" data-target="#modalCetak" id="btn-cetak" class="btn btn-primary" data-id_peminjaman="<?= $row['id_peminjaman']; ?>"> 
+                                        <i class="fa fa-print"></i> </button>
                                        </td>
                               
                                    </tr>
@@ -100,7 +102,15 @@
                                </div>
                                <div class="form-group ab-0">
                                  <label for="id_user"></label>
-                                 <input type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan Id Status" >
+                                 <input type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan Id User" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="tanggal_pinjam"></label>
+                                 <input type="text" name="tanggal_pinjam" id="tanggal_pinjam" class="form-control" placeholder="Masukkan Tanggal Peminjaman" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="tanggal_pengembalian"></label>
+                                 <input type="text" name="tanggal_pengembalian" id="tanggal_pengembalian" class="form-control" placeholder="Masukkan Tanggal Pengembalian" >
                                </div>
                            
                            </div>
@@ -165,6 +175,24 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <form action="/peminjaman/hapus" method="post">
+        <div class="modal-body">
+          Apakah anda yakin ingin menghapus data ini?
+          <input type="hidden" id="id_peminjaman" name="id_peminjaman">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary">Yakin</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Cetak Data -->
+<div class="modal fade" id="modalCetak">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="/peminjaman/cetak" method="get">
         <div class="modal-body">
           Apakah anda yakin ingin menghapus data ini?
           <input type="hidden" id="id_peminjaman" name="id_peminjaman">
