@@ -19,7 +19,6 @@ class M_Peminjaman extends Model
     public function getAllData()
     {
         return $this->db->table('perpussmkn2.tabel_peminjaman')
-        ->join('perpussmkn2.tabel_detail_peminjaman','perpussmkn2.tabel_detail_peminjaman.id_peminjaman = perpussmkn2.tabel_peminjaman.id_peminjaman')
         ->join('perpussmkn2.tabel_buku','perpussmkn2.tabel_buku.id_buku = perpussmkn2.tabel_peminjaman.id_buku')
         ->join('perpussmkn2.tabel_anggota','perpussmkn2.tabel_anggota.id_anggota = perpussmkn2.tabel_peminjaman.id_anggota')
         ->get()->getResultArray();
@@ -29,10 +28,7 @@ class M_Peminjaman extends Model
     {
         return $this->db->table('perpussmkn2.tabel_peminjaman')->insert($data);
     }
-    public function add($data2)
-    {
-        return $this->db->table('perpussmkn2.tabel_detail_peminjaman')->insert($data2);
-    }
+    
 
     public function hapus($id_peminjaman)
     {

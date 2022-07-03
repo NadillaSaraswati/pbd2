@@ -12,7 +12,6 @@ class Peminjaman extends Controller
     public function __construct ()
     {
         $this->model = new M_Peminjaman;
-        $this->model2 = new M_Detail_Peminjaman;
     }
 
     public function index()
@@ -45,23 +44,7 @@ class Peminjaman extends Controller
       if ($success){
           session()->setFlashdata('message', ' ditambahkan');
           return redirect()->to(base_url('peminjaman'));
-      }  
-      $id_peminjaman = $this->model->insertID();
-
-      $data2 =[
-            'id_peminjaman' => $id_peminjaman,
-            'id_buku' => $this->request->getPost('id_buku'),
-            'tanggal_pinjam' => $this->request->getPost('tanggal_pinjam'),
-            'tanggal_pengembalian' => $this->request->getPost('tanggal_pengembalian'),
-      ];
-
-      $success = $this->model2->add($data2);
-      if ($success){
-          session()->setFlashdata('message', ' ditambahkan');
-          return redirect()->to(base_url('peminjaman'));
-      }  
-
-    
+      }
 
     }
 
@@ -79,16 +62,12 @@ class Peminjaman extends Controller
         ];
            
 
-        
-
         //update  data
         $success = $this->model->ubah($data, $id_peminjaman);
         if ($success){
             session()->setFlashdata('message', ' diubah');
             return redirect()->to(base_url('peminjaman'));
         }
-
-
     }
 
     public function hapus()
