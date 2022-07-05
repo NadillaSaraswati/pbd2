@@ -34,7 +34,7 @@
         
         <?php if (session()->get('kode_akses') == 'a21cd') { ?>
         <a class="nav-link" href="<?= base_url('Anggota'); ?>">
-            <i class="fas fa-fw fa-list"></i>
+            <i class="fas fa-fw fa-address-card"></i>
             <span>Anggota</span></a>
             <?php } ?>
         
@@ -46,12 +46,12 @@
 
         <?php if (session()->get('kode_akses') == 'a21cd' || session()->get('kode_akses') == 'b21cd') { ?>
         <a class="nav-link" href="<?= base_url('Transaksi'); ?>">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-tag"></i>
             <span>Transaksi</span></a>
             <?php } ?>
 
         <a class="nav-link" href="<?= base_url('Laporan'); ?>">
-            <i class="fas fa-fw fa-table"></i>
+            <i class="fas fa-fw fa-file"></i>
             <span>Laporan</span></a>
 
         <?php if (session()->get('kode_akses') == 'a21cd') { ?>
