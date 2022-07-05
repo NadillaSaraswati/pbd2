@@ -32,20 +32,55 @@ class Peminjaman extends Controller
 
     public function tambah()
     {
-        $data = [
-            'id_peminjaman' => $this->request->getPost('id_peminjaman'),
-            'id_anggota' => $this->request->getPost('id_anggota'),
-            'id_buku' => $this->request->getPost('id_buku'),
-            'id_user' => $this->request->getPost('id_user'),
-        ];
+        if (isset($_POST['tambah'])){
+            $val = $this->validate([
+                'id_peminjaman' => [
+                    'label' => 'ID Peminjaman',
+                   'rules' => 'required|is_unique[perpussmkn2.tabel_peminjaman.id_peminjaman]',
+                ],
+                'id_anggota' => [
+                'label' => 'ID Anggota',
+                'rules'=> 'required'
+                ],
+                'id_buku' => 'required',
+                'tanggal_pinjam' => 'valid_date',
+                'tanggal_kembali' => 'valid_date',
+                'id_user' => 'required',
+            ]);
+            if(!$val){
+                session()->setFlashdata('err', \Config\Services::validation()->listErrors());
+                $data = [
+                    'judul' => 'Transaksi Peminjaman',
+                    'peminjaman' => $this->model->getAllData(),
+                ];
         
-      //insert data
-      $success = $this->model->tambah($data);
-      if ($success){
-          session()->setFlashdata('message', ' ditambahkan');
-          return redirect()->to(base_url('peminjaman'));
-      }
+                // return view('welcome_message');
+                echo view('templates/v_header', $data );
+                echo view('templates/v_sidebar');
+                echo view('templates/v_topbar');
+                echo view('Peminjaman/index', $data);
+                echo view('templates/v_footer');
+            } else{
 
+                $data = [
+                    'id_peminjaman' => $this->request->getPost('id_peminjaman'),
+                    'id_anggota' => $this->request->getPost('id_anggota'),
+                    'id_buku' => $this->request->getPost('id_buku'),
+                    'id_user' => $this->request->getPost('id_user'),
+                ];
+                
+              //insert data
+              $success = $this->model->tambah($data);
+              if ($success){
+                  session()->setFlashdata('message', ' ditambahkan');
+                  return redirect()->to(base_url('peminjaman'));
+              }
+        
+            }
+        } else {
+            return redirect()->to('peminjaman');
+        }
+       
     }
 
 

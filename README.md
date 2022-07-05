@@ -7,6 +7,18 @@
 4. Buka terminal, masukkan 'php spark serve' (tanpa tanda kutip)
 5. Jika berhasil, buka localhost:8080 di browser
 
+## Tutorial import database
+1. Ambil database terakhir dari folder Database Postgre SQL
+2. Buka pgAdmin
+3. Buat database dengan nama 'perpussmkn2'
+4. Setelah database dibuat, klik kanan database tersebut dan pilih Restore
+5. Jika ada error Binary Path pada Restore, ikuti instruksi berikut (https://stackoverflow.com/questions/69544583/please-configure-the-postgresql-binary-path-in-the-preferences-dialog)
+6. Di menu Restore, pilih file .tar yang akan dipakai
+7. Setelah restore berhasi, refresh Schema yang ada
+8. Akan muncul schema baru yaitu 'perpussmkn2'
+9. Buka schema tersebut, lalu buka tabel-tabel nya.
+10. Database siap dibaca atau diedit.
+
 ## Yang perlu dibuat untuk Update dan Delete data (contoh untuk Data Buku):
 
 https://github.com/NadillaSaraswati/pbd2/commit/12810961794c37195b37bd6ffb057a0018a4a5c7
