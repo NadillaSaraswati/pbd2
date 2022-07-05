@@ -174,6 +174,12 @@
                    </div>
                </div>
 
+               </div>
+               <!-- /.container-fluid -->
+
+               </div>
+               <!-- End of Main Content -->
+
                <!-- Modal Ubah Data Siswa -->
                <div class="modal fade" id="modalUbah" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
                    <div class="modal-dialog" role="document">
@@ -266,7 +272,12 @@
                        </div>
                    </div>
                </div>
+               
+               </div>
+               <!-- /.container-fluid -->
 
+               </div>
+               <!-- End of Main Content -->
 
 <!-- Modal Hapus Data Siswa-->
 <div class="modal fade" id="modalHapus">
