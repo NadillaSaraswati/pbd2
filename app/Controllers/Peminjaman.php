@@ -36,16 +36,17 @@ class Peminjaman extends Controller
             $val = $this->validate([
                 'id_peminjaman' => [
                     'label' => 'ID Peminjaman',
-                   'rules' => 'required|is_unique[perpussmkn2.tabel_peminjaman.id_peminjaman]',
+                   'rules' => 'required'
                 ],
                 'id_anggota' => [
                 'label' => 'ID Anggota',
                 'rules'=> 'required'
                 ],
+                
                 'id_buku' => 'required',
-                'tanggal_pinjam' => 'valid_date',
-                'tanggal_kembali' => 'valid_date',
-                'id_user' => 'required',
+                'tanggal_pinjam' => 'required',
+                 'tanggal_kembali' => 'required',
+                'id_user' => 'required'
             ]);
             if(!$val){
                 session()->setFlashdata('err', \Config\Services::validation()->listErrors());
@@ -67,6 +68,8 @@ class Peminjaman extends Controller
                     'id_anggota' => $this->request->getPost('id_anggota'),
                     'id_buku' => $this->request->getPost('id_buku'),
                     'id_user' => $this->request->getPost('id_user'),
+                    'tanggal_pinjam' => $this->request->getPost('tanggal_pinjam'),
+                    'tanggal_pengembalian' => $this->request->getPost('tanggal_pengembalian'),
                 ];
                 
               //insert data
@@ -93,6 +96,8 @@ class Peminjaman extends Controller
             'id_anggota' => $this->request->getPost('id_anggota'),
             'id_buku' => $this->request->getPost('id_buku'),
             'id_user' => $this->request->getPost('id_user'),
+            'tanggal_pinjam' => $this->request->getPost('tanggal_pinjam'),
+            'tanggal_pengembalian' => $this->request->getPost('tanggal_pengembalian'),
             
         ];
            
