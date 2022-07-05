@@ -16,11 +16,11 @@
 
     <a class="nav-link" href="<?= base_url('Detail_Peminjaman'); ?>">
         <i class="fas fa-fw fa-book"></i>
-        <span>Detail Peminjaman</span>
+        <span>Peminjaman</span>
     </a>
 
     <a class="nav-link" href="<?= base_url('Detail_Pengembalian'); ?>">
         <i class="fas fa-fw fa-book"></i>    
-        <span>Detail Pengembalian</span>
+        <span>Pengembalian</span>
     </a>
 </div>

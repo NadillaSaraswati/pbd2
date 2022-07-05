@@ -12,7 +12,7 @@ class Laporan_Anggota extends Controller
         $model = new M_Laporan_Anggota();
         $data = [
             'judul' => 'Laporan Anggota',
-            'laporan_anggota' => $model->getAllData()
+            'anggota' => $model->getAllData()
         ];
 
         // return view('welcome_message');

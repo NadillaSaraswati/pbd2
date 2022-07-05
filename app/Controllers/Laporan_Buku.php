@@ -12,7 +12,7 @@ class Laporan_Buku extends Controller
         $model = new M_Laporan_Buku();
         $data = [
             'judul' => 'Laporan Buku',
-            'laporan_buku' => $model->getAllData()
+            'buku' => $model->getAllData()
         ];
 
         // return view('welcome_message');

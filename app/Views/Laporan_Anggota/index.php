@@ -21,23 +21,23 @@
                         <th>No</th>
                         <th>Id Anggota</th>
                         <th>No Registrasi</th>
-                        <th>Id Jurusan</th>
+                        <th>Jurusan</th>
                         <th>Nama</th>
                         <th>No Induk</th>
                     </tr>
                 </thread>
                 <tbody>
                     <?php $i=1; ?>
-                    <?php  foreach($laporan_anggota as $row) :?>
-                        <tr>
-                            <td scope="row"><?= $i; ?></td>
-                            <td><?= $row['id_anggota']; ?></td>
-                            <td><?= $row['no_registrasi']; ?></td>
-                            <td><?= $row['id_jurusan']; ?></td>
-                            <td><?= $row['nama_anggota']; ?></td>
-                            <td><?= $row['no_induk']; ?></td>
-                        </tr>
-                        <?php $i++; ?>
+                    <?php  foreach($anggota as $row) :?>
+                    <tr>
+                        <td scope="row"><?= $i; ?></td>
+                        <td><?= $row['id_anggota']; ?></td>
+                        <td><?= $row['no_registrasi']; ?></td>
+                        <td><?= $row['jurusan']; ?></td>
+                        <td><?= $row['nama_anggota']; ?></td>
+                        <td><?= $row['no_induk']; ?></td>
+                    </tr>
+                    <?php $i++; ?>
                     <?php  endforeach;?>
                 </tbody>
             </table>

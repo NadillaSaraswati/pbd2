@@ -20,30 +20,30 @@
                     <tr>
                         <th>No</th>
                         <th>Id Buku</th>
-                        <th>Id Perolehan</th>
-                        <th>Id Status</th>
-                        <th>Id Pengarang</th>
-                        <th>Id Penerbit</th>
-                        <th>Id Subyek</th>
-                        <th>Id Jenis</th>
+                        <th>Perolehan</th>
+                        <th>Status</th>
+                        <th>Pengarang</th>
+                        <th>Penerbit</th>
+                        <th>Subyek</th>
+                        <th>Jenis</th>
                         <th>Judul Buku</th>
                     </tr>
                 </thread>
                 <tbody>
                     <?php $i=1; ?>
-                    <?php  foreach($laporan_buku as $row) :?>
-                        <tr>
-                            <td scope="row"><?= $i; ?></td>
-                            <td><?= $row['id_buku']; ?></td>
-                            <td><?= $row['id_perolehan']; ?></td>
-                            <td><?= $row['id_status']; ?></td>
-                            <td><?= $row['id_pengarang']; ?></td>
-                            <td><?= $row['id_penerbit']; ?></td>
-                            <td><?= $row['id_subyek']; ?></td>
-                            <td><?= $row['id_jenis']; ?></td>
-                            <td><?= $row['judul_buku']; ?></td>
-                        </tr>
-                        <?php $i++; ?>
+                    <?php  foreach($buku as $row) :?>
+                    <tr>
+                        <td scope="row"><?= $i; ?></td>
+                        <td><?= $row['id_buku']; ?></td>
+                        <td><?= $row['perolehan']; ?></td>
+                        <td><?= $row['status']; ?></td>
+                        <td><?= $row['nama_pengarang']; ?></td>
+                        <td><?= $row['nama_penerbit']; ?></td>
+                        <td><?= $row['subyek_buku']; ?></td>
+                        <td><?= $row['jenis_koleksi']; ?></td>
+                        <td><?= $row['judul_buku']; ?></td>
+                    </tr>
+                    <?php $i++; ?>
                     <?php  endforeach;?>
                 </tbody>
             </table>
