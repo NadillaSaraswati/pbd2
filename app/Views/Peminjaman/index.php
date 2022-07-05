@@ -17,7 +17,19 @@
                      $(".alert").alert();
                    </script>
                     <?php endif; ?>
+
+                    
                   
+                    <div class="row">
+                    <div class="col-md-6">
+                      <?php if(session()->get('err')) {
+                        echo "<div class='alert alert-danger' role='alert'>".session()->get('err')."</div>";
+                        session()->remove('err');
+                      }
+                      ?>
+                   </div>
+                   </div>
+
                    <div class="card">
                    <div class="class-header">
                              <!-- Button trigger modal -->
@@ -116,7 +128,7 @@
                            </div>
                            <div class="modal-footer">
                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                               <button type="submit" class="btn btn-primary">Tambah Data</button>
+                               <button type="submit" name="tambah" class="btn btn-primary">Tambah Data</button>
                            </div>
                            </form>
                        </div>
@@ -194,7 +206,7 @@
     <div class="modal-content">
       <form action="/peminjaman/cetak" method="get">
         <div class="modal-body">
-          Apakah anda yakin ingin menghapus data ini?
+          Apakah anda yakin ingin mencetak struk data ini?
           <input type="hidden" id="id_peminjaman" name="id_peminjaman">
         </div>
         <div class="modal-footer">
