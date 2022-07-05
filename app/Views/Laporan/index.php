@@ -5,22 +5,30 @@
     <h1 class="h3 mb-4 text-gray-800"><?= $judul; ?></h1>
 
     <a class="nav-link" href="<?= base_url('Laporan_Anggota'); ?>">
-        <i class="fas fa-fw fa-address-card"></i>
-        <span>Anggota</span>
+        <h5>
+            <i class="fas fa-fw fa-address-card"></i>
+            Anggota
+        </h5>
     </a>
 
     <a class="nav-link" href="<?= base_url('Laporan_Buku'); ?>">
-        <i class="fas fa-fw fa-book"></i>
-        <span>Buku</span>
+        <h5>
+            <i class="fas fa-fw fa-book"></i>
+            Buku
+        </h5>
     </a>
 
     <a class="nav-link" href="<?= base_url('Laporan_Peminjaman'); ?>">
-        <i class="fas fa-fw fa-arrow-right"></i>
-        <span>Peminjaman</span>
+        <h5>
+            <i class="fas fa-fw fa-arrow-right"></i>
+            Peminjaman
+        </h5>
     </a>
 
     <a class="nav-link" href="<?= base_url('Laporan_Pengembalian'); ?>">
-        <i class="fas fa-fw fa-arrow-left"></i>    
-        <span>Pengembalian</span>
+        <h5>
+            <i class="fas fa-fw fa-arrow-left"></i>
+            Pengembalian
+        </h5>
     </a>
 </div>
