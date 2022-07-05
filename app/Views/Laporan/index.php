@@ -14,12 +14,12 @@
         <span>Buku</span>
     </a>
 
-    <a class="nav-link" href="<?= base_url('Detail_Peminjaman'); ?>">
+    <a class="nav-link" href="<?= base_url('Laporan_Peminjaman'); ?>">
         <i class="fas fa-fw fa-book"></i>
         <span>Peminjaman</span>
     </a>
 
-    <a class="nav-link" href="<?= base_url('Detail_Pengembalian'); ?>">
+    <a class="nav-link" href="<?= base_url('Laporan_Pengembalian'); ?>">
         <i class="fas fa-fw fa-book"></i>    
         <span>Pengembalian</span>
     </a>
