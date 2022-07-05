@@ -24,10 +24,16 @@ $(document).on('click', '#btn-edit', function () {
   $('.modal-body #judul_buku').val($(this).data('judul_buku'));
 })
 
+// Button Hapus Data Buku
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_buku').val($(this).data('id_buku'));
+})
+
 // Button Hapus Data Anggota
 $(document).on('click', '#btn-hapus', function () {
   $('.modal-body #id_anggota').val($(this).data('id_anggota'));
 })
+
 
 // Button Edit Data Peminjaman
 $(document).on('click', '#btn-edit', function () {
@@ -68,4 +74,70 @@ $(document).on('click', '#btn-edit', function () {
 // Button Hapus Data User
 $(document).on('click', '#btn-hapus', function () {
   $('.modal-body #id_user').val($(this).data('id_user'));
+})
+
+// Button Edit Data Perolehan
+$(document).on('click', '#btn-edit', function () {
+  $('.modal-body #id_perolehan').val($(this).data('id_perolehan'));
+  $('.modal-body #perolehan').val($(this).data('perolehan'));
+})
+ 
+// Button Hapus Data Perolehan
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_perolehan').val($(this).data('id_perolehan'));
+})
+
+// Button Edit Data Status
+$(document).on('click', '#btn-edit', function () {
+  $('.modal-body #id_status').val($(this).data('id_status'));
+  $('.modal-body #status').val($(this).data('status'));
+})
+ 
+// Button Hapus Data status
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_status').val($(this).data('id_status'));
+})
+
+// Button Edit Data pengarang
+$(document).on('click', '#btn-edit', function () {
+  $('.modal-body #id_pengarang').val($(this).data('id_pengarang'));
+  $('.modal-body #nama_pengarang').val($(this).data('nama_pengarang'));
+})
+ 
+// Button Hapus Data pengarang
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_pengarang').val($(this).data('id_pengarang'));
+})
+
+// Button Edit Data penerbit
+$(document).on('click', '#btn-edit', function () {
+  $('.modal-body #id_penerbit').val($(this).data('id_penerbit'));
+  $('.modal-body #nama_penerbit').val($(this).data('nama_penerbit'));
+})
+ 
+// Button Hapus Data penerbit
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_penerbit').val($(this).data('id_penerbit'));
+})
+
+// Button Edit Data subyek
+$(document).on('click', '#btn-edit', function () {
+  $('.modal-body #id_subyek').val($(this).data('id_subyek'));
+  $('.modal-body #nama_subyek').val($(this).data('subyek_buku'));
+})
+ 
+// Button Hapus Data subyek
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_subyek').val($(this).data('id_subyek'));
+})
+
+// Button Edit Data jenis
+$(document).on('click', '#btn-edit', function () {
+  $('.modal-body #id_jenis').val($(this).data('id_jenis'));
+  $('.modal-body #jenis_koleksi').val($(this).data('jenis_koleksi'));
+})
+ 
+// Button Hapus Data jenis
+$(document).on('click', '#btn-hapus', function () {
+  $('.modal-body #id_jenis').val($(this).data('id_jenis'));
 })
