@@ -47,7 +47,7 @@
         </h5>
     </a>
 
-    <a class="nav-link" href="<?= base_url('subyek'); ?>">
+    <a class="nav-link" href="<?= base_url('jenis'); ?>">
         <h5>
             <i class="fas fa-fw fa-arrow-left"></i>
             Jenis Koleksi
