@@ -1,15 +1,15 @@
 # CodeIgniter 4 Application Starter
+
+## Tutorial instalasi
+1. Clone repository ini ke folder htdocs (xampp/htdocs/pbd2)
+2. Copy folder vendor dari link berikut ke dalam folder pbd2 (https://drive.google.com/drive/folders/15S9rWTsg05YdJAprd2-KxYYRMS5W-j1A?usp=sharing)
+3. Buka folder pbd2 di Visual Studio Code
+4. Buka terminal, masukkan 'php spark serve' (tanpa tanda kutip)
+5. Jika berhasil, buka localhost:8080 di browser
+
 ## Yang perlu dibuat untuk Update dan Delete data (contoh untuk Data Buku):
 
 https://github.com/NadillaSaraswati/pbd2/commit/12810961794c37195b37bd6ffb057a0018a4a5c7
-
-## Jika error saat 'php spark serve'
-
-https://drive.google.com/drive/folders/15S9rWTsg05YdJAprd2-KxYYRMS5W-j1A?usp=sharing
-
-Ikuti link di atas jika mendapatkan error seperti di bawah saat melakukan ‘php spark serve’:
-
-“php fatal error: uncaught typeerror: argument 1 passed to codeigniter\cli\console::__construct() must be an instance of codeigniter\codeigniter, int given, called in…”
 
 ## What is CodeIgniter?
 
