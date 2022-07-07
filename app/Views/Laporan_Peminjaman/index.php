@@ -23,6 +23,8 @@
             <th>Nama Anggota</th>
             <th>Judul Buku</th>
             <th>Id User</th>
+            <th>Tanggal Pinjam</th>
+            <th>Tanggal Pengembalian</th>
           </tr>
         </thread>
         
@@ -35,6 +37,8 @@
             <td><?= $row['nama_anggota']; ?></td>
             <td><?= $row['judul_buku']; ?></td>
             <td><?= $row['id_user']; ?></td>
+            <td><?= $row['tanggal_pinjam']; ?></td>
+            <td><?= $row['tanggal_pengembalian']; ?></td>
           </tr>
           <?php $i++; ?>
           <?php  endforeach;?>
