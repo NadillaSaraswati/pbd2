@@ -56,7 +56,7 @@
                                       
                                        <td>
                                         <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
-                                        data-id_anggota="<?= $row['id_anggota']; ?>" data-no_registrasi="<?= $row['no_registrasi']; ?>" data-id_jurusan="<?= $row['jurusan']; ?>" data-nama_anggota="<?= $row['nama_anggota']; ?>" 
+                                        data-id_anggota="<?= $row['id_anggota']; ?>" data-no_registrasi="<?= $row['no_registrasi']; ?>" data-id_jurusan="<?= $row['id_jurusan']; ?>" data-nama_anggota="<?= $row['nama_anggota']; ?>" 
                                         data-no_induk="<?= $row['no_induk']; ?>"> <i class="fa fa-edit"></i> </button>
                                         <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_anggota="<?= $row['id_anggota']; ?>"> 
                                         <i class="fa fa-trash-alt"></i> </button>
