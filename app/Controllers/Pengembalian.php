@@ -34,8 +34,9 @@ class Pengembalian extends Controller
             'id_pengembalian' => $this->request->getPost('id_pengembalian'),
             'id_anggota' => $this->request->getPost('id_anggota'),
             'id_user' => $this->request->getPost('id_user'),
-            'id_peminjaman' => $this->request->getPost('id_peminjaman')
-           
+            'id_peminjaman' => $this->request->getPost('id_peminjaman'),
+            'keterangan' => $this->request->getPost('keterangan'),
+            'tanggal_dikembalikan' => $this->request->getPost('tanggal_dikembalikan'),
         ];
 
      //insert data

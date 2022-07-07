@@ -37,6 +37,8 @@
                                        <th>Id Anggota</th>
                                        <th>Id User</th>
                                        <th>Id Peminjaman</th>
+                                       <th>Keterangan</th>
+                                       <th>Tanggal Dikembalikan</th>
                                        <th>Opsi</th>
                                    </tr>
                                </thread>
@@ -49,9 +51,11 @@
                                        <td><?= $row['id_anggota']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
                                        <td><?= $row['id_peminjaman']; ?></td>
+                                       <td><?= $row['keterangan']; ?></td>
+                                       <td><?= $row['tanggal_dikembalikan']; ?></td>
                                        <td>
                                        <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
-                                        data-id_pengembalian="<?= $row['id_pengembalian']; ?>" data-id_anggota="<?= $row['id_anggota']; ?>" data-id_user="<?= $row['id_user']; ?>" data-id_peminjaman="<?= $row['id_peminjaman']; ?>" 
+                                        data-id_pengembalian="<?= $row['id_pengembalian']; ?>" data-id_anggota="<?= $row['id_anggota']; ?>" data-id_user="<?= $row['id_user']; ?>" data-id_peminjaman="<?= $row['id_peminjaman']; ?>" data-keterangan="<?= $row['keterangan']; ?>" data-tanggal_dikembalikan="<?= $row['tanggal_dikembalikan']; ?>" 
                                         > <i class="fa fa-edit"></i> </button>
                                         <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_pengembalian="<?= $row['id_pengembalian']; ?>"> 
                                         <i class="fa fa-trash-alt"></i> </button>
@@ -101,6 +105,14 @@
                                  <label for="id_peminjaman"></label>
                                  <input type="text" name="id_peminjaman" id="id_peminjaman" class="form-control" placeholder="Masukkan Id Peminjaman" >
                                </div>
+                               <div class="form-group ab-0">
+                                 <label for="keterangan"></label>
+                                 <input type="text" name="keterangan" id="keterangan" class="form-control" placeholder="Masukkan Keterangan" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="tanggal_dikembalikan"></label>
+                                 <input type="text" name="tanggal_dikembalikan" id="tanggal_dikembalikan" class="form-control" placeholder="Masukkan Tanggal Dikembalikan" >
+                               </div>
                            
                            </div>
                            <div class="modal-footer">
@@ -141,6 +153,14 @@
                                <div class="form-group ab-0">
                                  <label for="id_peminjaman"></label>
                                  <input type="text" name="id_peminjaman" id="id_peminjaman" class="form-control" placeholder="Masukkan id peminjaman" value="<?= $row ['id_peminjaman'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="keterangan"></label>
+                                 <input type="text" name="keterangan" id="keterangan" class="form-control" placeholder="Masukkan Keterangan" value="<?= $row ['keterangan'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="tanggal_dikembalikan"></label>
+                                 <input type="text" name="tanggal_dikembalikan" id="tanggal_dikembalikan" class="form-control" placeholder="Masukkan Tanggal Dikembalikan" value="<?= $row ['tanggal_dikembalikan'] ?>" >
                                </div>
           
                                
