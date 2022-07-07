@@ -49,6 +49,8 @@
                                        <th>Nama Anggota</th>
                                        <th>Judul Buku</th>
                                        <th>Id User</th>
+                                       <th>Tanggal Pinjam</th>
+                                       <th>Tanggal Pengembalian</th>
                                        <th>Opsi</th>
                                    </tr>
                                </thread>
@@ -61,9 +63,11 @@
                                        <td><?= $row['nama_anggota']; ?></td>
                                        <td><?= $row['judul_buku']; ?></td>
                                        <td><?= $row['id_user']; ?></td>
+                                       <td><?= $row['tanggal_pinjam']; ?></td>
+                                       <td><?= $row['tanggal_pengembalian']; ?></td>
                                        <td>
                                        <button type="button" data-toggle="modal" data-target="#modalUbah" id="btn-edit" class="btn btn-warning" 
-                                        data-id_peminjaman="<?= $row['id_peminjaman']; ?>" data-nama_anggota="<?= $row['nama_anggota']; ?>" data-judul_buku="<?= $row['judul_buku']; ?>" data-id_user="<?= $row['id_user']; ?>" 
+                                        data-id_peminjaman="<?= $row['id_peminjaman']; ?>" data-id_anggota="<?= $row['id_anggota']; ?>" data-id_buku="<?= $row['id_buku']; ?>" data-id_user="<?= $row['id_user']; ?>" data-tanggal_pinjam="<?= $row['tanggal_pinjam']; ?>" data-tanggal_pengembalian="<?= $row['tanggal_pengembalian']; ?>"
                                         > <i class="fa fa-edit"></i> </button>
                                         <button type="button" data-toggle="modal" data-target="#modalHapus" id="btn-hapus" class="btn btn-danger" data-id_peminjaman="<?= $row['id_peminjaman']; ?>"> 
                                         <i class="fa fa-trash-alt"></i> </button>
@@ -168,6 +172,14 @@
                                <div class="form-group ab-0">
                                  <label for="id_user"></label>
                                  <input type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan id User" value="<?= $row ['id_user'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="tanggal_pinjam"></label>
+                                 <input type="text" name="tanggal_pinjam" id="tanggal_pinjam" class="form-control" placeholder="Masukkan Tanggal Pinjam" value="<?= $row ['tanggal_pinjam'] ?>" >
+                               </div>
+                               <div class="form-group ab-0">
+                                 <label for="tanggal_pengembalian"></label>
+                                 <input type="text" name="tanggal_pengembalian" id="tanggal_pengembalian" class="form-control" placeholder="Masukkan Tanggal Pengembalian" value="<?= $row ['tanggal_pengembalian'] ?>" >
                                </div>
           
                                
