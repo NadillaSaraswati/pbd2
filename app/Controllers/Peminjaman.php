@@ -44,8 +44,8 @@ class Peminjaman extends Controller
                 ],
                 
                 'id_buku' => 'required',
-                'tanggal_pinjam' => 'required',
-                 'tanggal_kembali' => 'required',
+                // 'tanggal_pinjam' => 'required',
+                //  'tanggal_kembali' => 'required',
                 'id_user' => 'required'
             ]);
             if(!$val){
