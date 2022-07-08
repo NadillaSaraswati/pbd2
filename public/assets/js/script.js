@@ -41,6 +41,8 @@ $(document).on('click', '#btn-edit', function () {
   $('.modal-body #id_anggota').val($(this).data('id_anggota'));
   $('.modal-body #id_buku').val($(this).data('id_buku'));
   $('.modal-body #id_user').val($(this).data('id_user'));
+  $('.modal-body #tanggal_pinjam').val($(this).data('tanggal_pinjam'));
+  $('.modal-body #tanggal_pengembalian').val($(this).data('tanggal_pengembalian'));
 })
 
 // Button Hapus Data Peminjaman
@@ -54,6 +56,8 @@ $(document).on('click', '#btn-edit', function () {
   $('.modal-body #id_anggota').val($(this).data('id_anggota'));
   $('.modal-body #id_user').val($(this).data('id_user'));
   $('.modal-body #id_pengembalian').val($(this).data('id_pengembalian'));
+  $('.modal-body #keterangan').val($(this).data('keterangan'));
+  $('.modal-body #tanggal_dikembalikan').val($(this).data('tanggal_dikembalikan'));
 })
 
 // Button Hapus Data Pengembalian
